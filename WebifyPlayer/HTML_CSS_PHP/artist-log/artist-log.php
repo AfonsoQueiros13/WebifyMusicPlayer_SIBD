@@ -83,7 +83,7 @@
           </form>
           <? } ?>
           <?
-          $result = verifyMyAlbums($id_user, $id_album);;
+          $result = verifyMyAlbums($id_user, $id_album);
           if ($result == 1){
           ?> <a> Album added in MyAlbums </a>
           <? } ?>
