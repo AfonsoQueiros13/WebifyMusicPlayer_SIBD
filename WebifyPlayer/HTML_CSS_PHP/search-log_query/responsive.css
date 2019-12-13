@@ -1,0 +1,14 @@
+body div#sidebar{
+  width: 0%;
+  opacity: 0;
+  height: 100%;
+}
+
+
+
+body div#sidebar-clone:hover div#sidebar{
+  width: 100%;
+  transition: all 0.5s ease;
+  color: white;
+  opacity:1;
+}

@@ -1,0 +1,112 @@
+body{
+  background-color:  #121212;
+}
+
+body header{
+  color: white;
+  background-color: #0b0b0b;
+  font-family: "Georgia", serif;
+  /* border-radius: 50px; */
+  margin-bottom: 1em;
+}
+
+body header img{
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 75px;
+}
+
+body header div#signup {
+  text-decoration: none;
+  color:white;
+}
+
+body header div#signup{ /*  Login     */
+  padding: 1em 1.5em 1em 1.5em;
+  margin-right: 2em;
+  background-color: #034f84;
+  border-radius: 25px;
+}
+
+
+
+
+/*  CONTENT  */
+
+body div#sidebar-clone{
+  background-color: #121212;
+}
+
+body div#iconmenu{
+  background-color: #282828;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color:white;
+}
+
+body div#iconmenu ul{
+  list-style-type: none;
+}
+
+body div#iconmenu ul li{
+  margin-top: 2em;
+  margin-right: 2em;
+  font-size: 1em;
+}
+
+body div#iconmenu ul li i{
+  font-size: 1.5em;
+  margin-right: 1em;
+
+}
+
+body div#iconmenu ul li a{
+  text-decoration: none;
+  color:grey;
+}
+
+body div#iconmenu ul>li:nth-child(1)>a {
+  color:white;
+  border-style: hidden hidden hidden solid;
+  border-color: #034f84;
+}
+
+
+body div#rest{
+  margin-top: 2em;
+}
+
+body div#rest article h2{ /* TRENDING,... */
+  color:white;
+  margin-left: 3em;
+}
+
+body div#rest article ul{
+  list-style-type: none;
+}
+
+body div#rest>article>ul li{  /*MUSICS/ARTISTS*/
+  color: #adb3b3;
+  background-color: #262626;
+  border-radius: 25px;
+  margin: 2em 2em 2em 2em;
+  padding: 1em 1em 1em 1em;
+}
+
+body div#rest article ul li img{  /*MUSICS/ARTISTS*/
+  max-width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body  div#rest>article ul li div{
+  margin-top: .5em;
+  text-align: center;
+
+}
+
+body  div#rest>article ul li a{
+  text-decoration: none;
+  color: #adb3b3;
+}

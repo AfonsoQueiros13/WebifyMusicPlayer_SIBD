@@ -1,0 +1,125 @@
+body{
+  background-color:  #121212;
+}
+
+body header{
+  color: white;
+  background-color: #0b0b0b;
+  font-family: "Georgia", serif;
+  /* border-radius: 50px; */
+  margin-bottom: 1em;
+}
+
+
+body header img{
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 75px;
+}
+
+body header div#signup a{
+  text-decoration: none;
+  color:white;
+}
+
+body header div#signup a:nth-child(1){ /*  Register  */
+  margin-right: 1em;
+  padding:1em 1em 1em 1em;
+  border-radius: 25px;
+  border: 2px solid #b2b2b2;
+}
+
+body header div#signup a:nth-child(2){ /*  Login     */
+  padding: 1em 1.5em 1em 1.5em;
+  background-color: #034f84;
+  border-radius: 25px;
+  margin-right: 2em;
+}
+
+/*CONTENT*/
+
+body h2{
+  color:white;
+  text-align: start;
+  font-size: 200%;
+  margin-left: 2em;
+}
+
+body h3{
+  color:white;
+  text-align: start;
+  font-size: 200%;
+  margin-left: 2em;
+}
+
+body h4{
+  color:white;
+  text-align: start;
+  font-size: 200%;
+  margin-left: 2em;
+}
+
+body  div#initialtext div{
+  color:white;
+  margin-left: 6em;
+}
+
+body form input[type=text]{
+  margin-left: 1em;
+  border-style: hidden;
+  font-size: 2em;
+  padding: 1em 1em 1em 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+body form input[type=submit]{
+  margin-right: 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-style: hidden;
+  font-size: 2em;
+  padding: 1em 1em 1em 1em;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+body div#sidebar-clone{
+  background-color: #121212;
+}
+
+body div#sidebar{
+  background-color: #282828;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color:white;
+}
+
+body div#sidebar ul{
+  list-style-type: none;
+}
+
+body div#sidebar ul li{
+  margin-top: 2em;
+  margin-right: 2em;
+  font-size: 1em;
+}
+
+body div#sidebar ul li i{
+  font-size: 1.5em;
+  margin-right: 1em;
+
+}
+
+body div#sidebar ul li a{
+  text-decoration: none;
+  color:grey;
+}
+
+body div#sidebar ul>li:nth-child(2)>a {
+  color:white;
+  border-style: hidden hidden hidden solid;
+  border-color: #034f84;
+}

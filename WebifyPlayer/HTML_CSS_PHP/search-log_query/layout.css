@@ -1,0 +1,76 @@
+body{
+  display:grid;
+  grid-template-columns: [sidebar-start] 2fr [sidebar-end-page-start] 8fr [page-end] 2fr [page-final];
+  grid-template-rows: [topbar-start] auto [topbar-end-search-start] auto [search-end-content-start] auto [content-end];
+  grid-template-areas: "topbar topbar topbar"
+                       "sidebar search useless"
+                       "sidebar contentpage useless";
+}
+
+body header{
+  grid-area:topbar;
+  display:grid;
+  grid-template-columns: [logo-start] 1fr [logo-end-name-start] 1fr [name-end-signup-start] 10fr [signup-end];
+  grid-template-areas: "logo title signup";
+}
+
+body header img{
+  grid-area:logo;
+  align-self: center;
+}
+
+body header h1{
+  grid-area: title;
+  justify-self:start;
+}
+
+body header div#signup{
+  grid-area: signup;
+  justify-self:end;
+  align-self: center;
+}
+
+body form{
+  grid-area:search;
+  display:flex;
+  flex-direction: row;
+}
+
+body form input[type=text]{
+  flex-grow: 10;
+}
+
+body form input[type=submit]{
+  flex-grow: 1;
+}
+
+body div#initialtext{
+  grid-area: contentpage;
+  align-self: center;
+}
+
+body div#sidebar-clone{
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: [page-start] auto [page-end];
+  grid-template-rows: [menu-start] auto [menu-end] auto [page-end];
+  grid-template-areas: "menu" "menu";
+}
+
+body div#sidebar-clone div#iconmenu{
+  grid-area: menu;
+}
+
+body div#sidebar-clone div#iconmenu ul{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body  div#sidebar-clone div#iconmenu ul li{
+  flex-grow: .1;
+}
+
+body  div#sidebar-clone div#iconmenu ul li:nth-child(4){
+flex-grow: .5;
+}
