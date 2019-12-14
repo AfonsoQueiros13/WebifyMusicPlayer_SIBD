@@ -43,16 +43,18 @@
         require_once('../../config/init.php');
         require_once('../../tools/db_queries_album.php');
         require_once('../../tools/db_queries_search.php');
+        require_once('../../tools/db_queries_artists.php');
 
         $ID=$_GET['id'];
         $albums=searchForAlbums_by_artist_id($ID);
         $info=get_artist_name_by_id($ID);
-
+        $artist = get_artist_by_id($ID);
 
          ?>
 
         <div id="artist">
           <h2> <?=$info['name'] ?> </h2>
+          <img src="<?= $artist['img_path_artist'] ?>" alt="artistcover">
         </div>
 
           <ul>

@@ -31,6 +31,7 @@ CREATE TABLE music (
 CREATE TABLE artist(
   id integer PRIMARY KEY,
   name varchar,
+  img_path_artist varchar,
   id_genre integer references genre
 
 );
@@ -115,12 +116,13 @@ insert into genre values(5,'Reggae');
 
 
 
-insert into artist values(1,'Tyler, The Creator',1);
-insert into artist values(2,'Drake',1);
-insert into artist values(3,'Nas',2);
-insert into artist values(4,'Da Steez Brothaz',2);
-insert into artist values(5,'AZ',2);
-insert into artist values(6,'Damian Marley',5);
+insert into artist values(1,'Tyler, The Creator','../../images/artists/tyler/tyler.jpg',1);
+insert into artist values(2,'Drake','../../images/artists/drake/drake.jpg',1);
+insert into artist values(3,'Nas','../../images/artists/nas/nas.jpg',2);
+insert into artist values(4,'Da Steez Brothaz','../../images/artists/steez_brothaz/steez_brothaz.jpg',2);
+insert into artist values(5,'AZ','../../images/artists/az/az.jpg',2);
+insert into artist values(6,'Damian Marley','../../images/artists/damian_marley/damian_marley.jpg',5);
+insert into artist values(7,'Mac Miller','../../images/artists/mac_miller/mac_miller.jpg',1);
 
 insert into album values(1,'IGOR',1,12,'../../images/artists/tyler/igor/igor.jpeg',1);
 insert into album values(2,'Scorpion',2,6,'../../images/artists/drake/scorpion/scorpion.jpg',1);
@@ -129,6 +131,12 @@ insert into album values(4,'Illmatic',3,6, '../../images/artists/nas/illmatic/il
 insert into album values(5,'Physical Rappin',4,6, '../../images/artists/steez_brothaz/physical_rappin/physical_rappin.jpeg',2);
 insert into album values(6,'Doe or Die',5,6, '../../images/artists/az/doe_or_die/doe_or_die.jpeg',2);
 insert into album values(7,'Distant Relatives',6,6, '../../images/artists/damian_marley/distant_relatives/distant_relatives.jpeg',5);
+insert into album values(8,'Swimming',7,6, '../../images/artists/mac_miller/swimming/swimming.png',1);
+insert into album values(9,'Take Care (Deluxe)',2,6, '../../images/artists/drake/take_care/take_care.jpg',1);
+insert into album values(10,'Care Package',2,6, '../../images/artists/drake/care_package/care_package.jpg',1);
+insert into album values(11,'Views',2,6, '../../images/artists/drake/views/views.jpg',1);
+
+
 
 
 /*IGOR;TYLER*/
@@ -170,6 +178,42 @@ insert into music values(27,3,'Droppin Seeds','Flower Boy',1,201,1);
 insert into music values(28,3,'November','Flower Boy',1,201,1);
 insert into music values(29,3,'Glitter','Flower Boy',1,201,1);
 insert into music values(30,3,'Enjoy Right Now, Today','Flower Boy',1,201,1);
+
+
+/*SWIMMING;MAC MILLER*/
+insert into music values(58,8,'Come back to Earth','Swimming',7,201,1);
+insert into music values(59,8,'Hurt Feelings','Swimming',7,201,1);
+insert into music values(60,8,'What`s the Use?','Swimming',7,201,1);
+insert into music values(61,8,'Perfecto','Swimming',7,201,1);
+insert into music values(62,8,'Self Care','Swimming',7,201,1);
+insert into music values(63,8,'Wings','Swimming',7,201,1);
+
+
+/*TAKE CARE (DELUXE);DRAKE*/
+insert into music values(64,9,'Marvin`s Room','Take Care (Deluxe)',2,201,1);
+insert into music values(65,9,'Take Care','Take Care (Deluxe)',2,201,1);
+insert into music values(66,9,'Crew Love','Take Care (Deluxe)',2,201,1);
+insert into music values(67,9,'Over My Dead Body','Take Care (Deluxe)',2,201,1);
+insert into music values(68,9,'Shot for Me','Take Care (Deluxe)',2,201,1);
+insert into music values(69,9,'Headlines','Take Care (Deluxe)',2,201,1);
+
+/*CARE PACKAGE;DRAKE*/
+insert into music values(70,10,'The Motion','Care Package',2,201,1);
+insert into music values(71,10,'Dreams Money Can Buy','Care Package',2,201,1);
+insert into music values(72,10,'How Bout Now','Care Package',2,201,1);
+insert into music values(73,10,'4pm in Calabasas','Care Package',2,201,1);
+insert into music values(74,10,'5am in Toronto','Care Package',2,201,1);
+insert into music values(75,10,'Paris Morton Music','Care Package',2,201,1);
+
+
+/*CARE PACKAGE;DRAKE*/
+insert into music values(76,11,'Keep The Family Close','Views',2,201,1);
+insert into music values(77,11,'9','Views',2,201,1);
+insert into music values(78,11,'U with Me?','Views',2,201,1);
+insert into music values(79,11,'Weston Road Flows','Views',2,201,1);
+insert into music values(80,11,'Grammys','Views',2,201,1);
+insert into music values(81,11,'Childs Play','Views',2,201,1);
+
 
 /*ILLMATIC;NAS*/
 

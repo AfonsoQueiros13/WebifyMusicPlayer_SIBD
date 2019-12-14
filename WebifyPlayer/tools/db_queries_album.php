@@ -5,6 +5,18 @@ error_reporting(E_ALL);
 
 /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
 
+function get_all_rap_albums()
+{
+
+    global $dbh;
+    $query = "SELECT * FROM album where album.id_genre = 1";
+    $stmt = $dbh->prepare($query);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+
+
 function get_all_albums_from_trends(){
   global $dbh;
   $stmt=$dbh->prepare('SELECT * FROM trends join album where id=id_album');
@@ -12,6 +24,12 @@ function get_all_albums_from_trends(){
   return $stmt->fetchAll();
 }
 
+function get_album(){
+  global $dbh;
+  $stmt=$dbh->prepare('SELECT * FROM album');
+  $stmt->execute();
+  return $stmt->fetchAll();
+}
 function get_album_by_id($id){
   global $dbh;
   $stmt=$dbh->prepare('SELECT * FROM album where id= ?');
@@ -56,6 +74,7 @@ function insertMyAlbum($id_user,$id_album){
       $stmt->execute(array($id_user, $id_album)); //NULL AUTOINCREMENTS ID
       header('Location: ../artist-log/artist-log.php?id_album='.$id_album .'&id_user=' . $id_user);
   } 
+
 }
 
 function verifyMyAlbums($id_user, $id_album)
@@ -77,11 +96,19 @@ function selectMyAlbums($id_user)
 {
 
     global $dbh;
-    $query = "SELECT album.nome_album FROM album, liked_albums WHERE album.id = liked_albums.id_album AND liked_albums.id_user = ?";
+    $query = "SELECT * FROM album, liked_albums WHERE album.id = liked_albums.id_album AND liked_albums.id_user = ?";
     $stmt = $dbh->prepare($query);
     $stmt->execute(array($id_user));
     $count = $stmt->fetchColumn();
     return $stmt->fetchAll();
 }
 
+
+function deleteMyAlbums($id_album, $id_user)
+{
+    global $dbh;
+    $query = "DELETE FROM  liked_albums WHERE liked_albums.id_album = ? AND liked_albums.id_user = ?";
+    $stmt = $dbh->prepare($query);
+    $stmt->execute(array($id_album,$id_user));
+}
  ?>

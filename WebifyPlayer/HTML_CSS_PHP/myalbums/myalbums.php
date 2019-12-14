@@ -30,10 +30,10 @@
   <div id="sidebar-clone">
     <div id="iconmenu">
       <ul>
-        <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?= $id ?>">Home</a></li>
-        <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?= $id ?>">Search</a></li>
-        <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php">My Songs</a></li>
-        <li><i class="fa fa-folder"></i><a href="../myalbums/myalbums.php?id=<?= $id ?>">My Albums</a></li>
+        <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?=$id?>">Home</a></li>
+        <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?=$id?>">Search</a></li>
+        <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php?id=<?=$id?>">My Songs</a></li>
+        <li><i class="fa fa-folder"></i><a href="../myalbums/myalbums.php?id=<?=$id?>">My Albums</a></li>
         <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
       </ul>
     </div>
@@ -58,18 +58,25 @@
       #$searchmusic = $_POST['searchquery'];
       $id = $_GET['id'];
       $allalbums = selectMyAlbums($id);
-
+      
 
       $count = 0;
       foreach ($allalbums as $album) {
+        
+        $album = $allalbums[$count]['id_album'];
+        $name_album = get_album_by_id($album);
 
-        //$album = get_album_by_id($all_albums[$count++]['nome_album']);
-        $album = $allalbums[$count]['nome_album'];
         ?>
 
         <li>
-          <a href="../artist-guest/artist-guest.php?id=?>">
-
+        <a href="../artist-log/artist-log.php?id_album=<?=$album?>&id_user=<?=$id?>">
+          <? $result = verifyMyAlbums($id, $album);
+                  if ($result == 1) {
+                    ?><form action="../php_actions/action_removemyalbums.php?id_user=<?=$id ?>&id_album=<?=$album ?>" id="form2" method="post">
+                    <input type="submit" value="Remove from My Albums">
+                    <? echo $name_album['nome_album']; ?>
+                  </form>
+                <? } ?>
             <div>
               <?= $album ?>
             </div>

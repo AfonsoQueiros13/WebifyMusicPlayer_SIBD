@@ -30,11 +30,11 @@
     <div id="sidebar-clone">
       <div id="iconmenu">
         <ul>
-          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?= $id ?>">Home</a></li>
-          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?= $id ?>">Search</a></li>
+          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?=$id ?>">Home</a></li>
+          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?=$id ?>">Search</a></li>
           <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php">My Songs</a></li>
-          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?= $id ?>">Playlists</a></li>
-          <li><i class="fa fa-folder"></i><a href="../myalbums/albums.php?id=<?= $id ?>">MyAlbums</a></li>
+          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?=$id ?>">Playlists</a></li>
+          <li><i class="fa fa-folder"></i><a href="../myalbums/myalbums.php?id=<?=$id ?>">MyAlbums</a></li>
           <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
         </ul>
       </div>
@@ -62,8 +62,6 @@
 
         $count = 0;
         foreach ($allmusics as $music) {
-
-          //$album = get_album_by_id($all_albums[$count++]['nome_album']);
           ?>
 
           <li>
@@ -72,23 +70,19 @@
               <a><?= $musicID = $musicsids[0]['id']; ?>
                 <? $result = verifyMySongs($id, $musicID);
                   if ($result == 1) {
-                    ?><form action="../php_actions/action_removemysongs.php?id_user=<?=$id?>&id_music=<?=$musicID?>" id="form2" method="post">          
+                    ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $musicID ?>" id="form2" method="post">
                     <input type="submit" value="Remove from My Songs">
-                    <?echo $music['name_music'];?>
+                    <? echo $music['name_music']; ?>
                   </form>
                 <? } ?>
 
 
-
+        <?php
+          }
+        ?>
             </div>
             </a>
           </li>
-
-
-        <?php
-        }
-        ?>
-
       </ul>
     </div>
 
