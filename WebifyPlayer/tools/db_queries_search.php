@@ -54,6 +54,13 @@ function searchForAlbums_by_artist_id($search)
   return $stmt->fetchAll();
 }
 
+function getalbumid_by_albumname($search){
+  global $dbh;
+  $query = "SELECT distinct album.id from artist join album join music where nome_album=?";
+  $stmt = $dbh->prepare($query);
+  $stmt->execute(array($search));
+  return $stmt->fetch();
+}
 
 function get_album_image($search)
 {

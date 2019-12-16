@@ -106,10 +106,11 @@
         $path = get_album_image($album['nome_album']);
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $album = $all_albums[$count++]['nome_album'];
+        $link= getalbumid_by_albumname($album);
         ?>
 
         <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+          <a href="../artist-guest/artist-guest.php?id=<?=$link['id'] ?>">
             <img src="<?=$path[$count2]['img_path']?>" alt="artistcover">
             <div>
               <?= $album ?>
@@ -152,8 +153,6 @@
         ?>
 
         <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $music['id'] ?>">
-
             <div>
               <?= $music ?>
             </div>
