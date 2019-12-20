@@ -86,16 +86,16 @@
                     ?>
 
                     <li>
-                        <a href="../artist-log/artist-log.php?id_album=<?= $album['id'] ?>&id_user=<?= $_GET['id'] ?>">
-                            <img src="<?= $album['img_path'] ?>" alt="artistcover">
+                        <a href="../artist-log/artist-log.php?id_album=<?=$album['id']?>&id_user=<?=$_GET['id'] ?>">
+                            <img src="<?= $album['img_path']?>" alt="artistcover">
                             <div>
-                                <?= $album['nome_album'] ?>
+                                <?=$album['nome_album']?>
                             </div>
                         </a>
                     </li>
 
 
-                <?php } ?>
+                <?}?>
 
 
 
@@ -124,8 +124,8 @@
                     ?>
 
                     <li>
-                        <a href="../artist-log/artist-log.php?id_album=<?= $rap_album['id'] ?>&id_user=<?= $_GET['id'] ?>">
-                            <img src="<?= $rap_album['img_path'] ?>" alt="artistcover">
+                        <a href="../artist-log/artist-log.php?id_album=<?=$rap_album['id']?>&id_user=<?=$_GET['id']?>">
+                            <img src="<?=$rap_album['img_path']?>" alt="artistcover">
                             <div>
                                 <?= $rap_album['nome_album'] ?>
                             </div>
@@ -133,7 +133,7 @@
                     </li>
 
 
-                <?php } ?>
+                <?}?>
             </ul>
 
         </article>
