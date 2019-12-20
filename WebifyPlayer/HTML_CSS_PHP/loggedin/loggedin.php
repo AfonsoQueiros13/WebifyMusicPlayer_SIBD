@@ -22,16 +22,16 @@
         <?php $id = $_GET['id'];
             $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
-            if (file_exists($pngphoto)) {
+            if (file_exists($pngphoto)) 
                 ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?}?>
-            <?if (file_exists($jpgphoto)) {
+ 
+            <?if (file_exists($jpgphoto)) 
                 ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?}?>
-            <?if (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
+ 
+            <?if (!file_exists($pngphoto) && !file_exists($jpgphoto)) 
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
                 
-            <?}?>
+ 
             
         
         
@@ -166,9 +166,7 @@
                             </div>
                         </a>
                     </li>
-
-
-                <?php } ?>
+                <?}?>
             </ul>
         </article>
 
