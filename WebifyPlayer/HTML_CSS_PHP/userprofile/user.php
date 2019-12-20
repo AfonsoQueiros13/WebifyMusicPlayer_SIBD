@@ -26,11 +26,6 @@
             <?}?>
             <?if (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
-                <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="submit"  name="submit">
-                </form> 
             <?}?>
     <div id="signup">
       <?php
@@ -41,10 +36,6 @@
       $id = $_GET['id'];
       $nickname = selectUserNickfromID($id);
       echo($nickname[0]['nick_name']);?>
-    </div>
-    <div id="img">
-      <img src="../../images/user/default.jpg" alt="default_photo">
-    </div>
   </header>
 
   <div id="sidebar-clone">
@@ -61,12 +52,11 @@
 
   <div id="rest">
     <h1><?echo($nickname[0]['nick_name'])?></h1>
-
-    <h2> Change Profile Picture
-      <form action="../php_actions/action_profile.php">
-        <input type="file" name="myFile" accept="image/jpeg"><br><br>
-        <input type="submit" value="Choose Photo"> </h2>
-      </form>
+    <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
+                    Select image to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit"  name="submit">
+                </form> 
   </div>
 
 </body>

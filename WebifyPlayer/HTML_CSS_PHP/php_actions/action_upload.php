@@ -1,8 +1,5 @@
 <?php
 $id = $_GET['id'];
-$string = "ola".$id;
-echo ($string);
-
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -42,7 +39,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        header('Location: ../loggedin/loggedin.php?&id='.$id);
+        header('Location: ../userprofile/user.php?&id='.$id);
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
