@@ -19,16 +19,16 @@
 
             <img src="../../images/logo.png" alt="logo">
             <h1>Webify</h1>
-            <?php $id = $_GET['id'];
+            <?phpphp $id = $_GET['id'];
                 $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
                 $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
                 if (file_exists($pngphoto)) ?> 
                 <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
     
-                <?if (file_exists($jpgphoto)) ?> 
+                <?phpif (file_exists($jpgphoto)) ?> 
                 <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
     
-                <?if (!file_exists($pngphoto) && !file_exists($jpgphoto)) ?> 
+                <?phpif (!file_exists($pngphoto) && !file_exists($jpgphoto)) ?> 
                 <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
                     
     
@@ -36,7 +36,7 @@
             
             
             <div id="signup">
-                <?php
+                <?phpphp
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 require_once('../../config/init.php');
@@ -70,7 +70,7 @@
                 <!-- artists -> songs or just songs? -->
                 <h2>Trending Albums</h2>
                 <ul>
-                    <?php
+                    <?phpphp
                     ini_set('display_errors', 1);
                     ini_set('display_startup_errors', 1);
                     require_once('../../config/init.php');
@@ -95,7 +95,7 @@
                         </li>
 
 
-                    <?php endforeach; ?>
+                    <?phpphp endforeach; ?>
 
 
 
@@ -109,7 +109,7 @@
                 <!-- artists -> songs or just songs? -->
                 <h2>Albuns by Genre - Rap</h2>
                 <ul>
-                    <?php
+                    <?phpphp
                     ini_set('display_errors', 1);
                     ini_set('display_startup_errors', 1);
                     require_once('../../config/init.php');
@@ -133,7 +133,7 @@
                         </li>
 
 
-                    <?php endforeach; ?>
+                    <?phpphp endforeach; ?>
                 </ul>
 
             </article>
@@ -142,7 +142,7 @@
                 <!-- artists -> songs or just songs? -->
                 <h2>Artists of the Moment</h2>
                 <ul>
-                    <?php
+                    <?phpphp
                     ini_set('display_errors', 1);
                     ini_set('display_startup_errors', 1);
                     require_once('../../config/init.php');
@@ -164,7 +164,7 @@
                                 </div>
                             </a>
                         </li>
-                    <?php endforeach; ?>
+                    <?phpphp endforeach; ?>
                 </ul>
             </article>
 

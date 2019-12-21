@@ -15,25 +15,25 @@
     <header>
       <img src="../../images/logo.png" alt="logo">
       <h1>Webify</h1>
-      <?php $id = $_GET['id'];
+      <?phpphp $id = $_GET['id'];
             $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
             if (file_exists($pngphoto)) :
                 ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?php endif;?>
-            <?php if (file_exists($jpgphoto)):
+            <?phpphp endif;?>
+            <?phpphp if (file_exists($jpgphoto)):
                 ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?php endif;?>
-            <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)) :
+            <?phpphp endif;?>
+            <?phpphp if (!file_exists($pngphoto) && !file_exists($jpgphoto)) :
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
                 <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit"  name="submit">
                 </form> 
-            <?php endif;?>
+            <?phpphp endif;?>
       <div id="signup">
-        <?php
+        <?phpphp
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         require_once('../../config/init.php');
@@ -43,7 +43,7 @@
         echo ($nickname[0]['nick_name']); ?>
       </div>
     </header>
-    <? $id = $_GET['id']; ?>
+    <?php $id = $_GET['id']; ?>
     <div id="sidebar-clone">
       <div id="iconmenu">
         <ul>
@@ -62,7 +62,7 @@
     <div id="cont">
       <h2>My Songs</h2>
       <ul>
-        <?php
+        <?phpphp
         /*DISPLAY ERRORS*/
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -83,18 +83,18 @@
 
           <li>
             <div>
-              <?php $musicsids = selectMusicIDbyName($music['name_music']); ?>
+              <?phpphp $musicsids = selectMusicIDbyName($music['name_music']); ?>
               <a><?= $musicID = $musicsids[0]['id']; ?>
-                <?php $result = verifyMySongs($id, $musicID);
+                <?phpphp $result = verifyMySongs($id, $musicID);
                   if ($result == 1) :
                     ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $musicID ?>" id="form2" method="post">
                     <input type="submit" value="Remove from My Songs">
-                    <? echo $music['name_music']; ?>
+                    <?php echo $music['name_music']; ?>
                   </form>
-                  <?php endif;?>
+                  <?phpphp endif;?>
 
 
-              <?php endforeach; ?>
+              <?phpphp endforeach; ?>
 
             </div>
             </a>

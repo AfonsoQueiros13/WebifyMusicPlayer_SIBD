@@ -15,25 +15,25 @@
   <header>
     <img src="../../images/logo.png" alt="logo">
     <h1>Webify</h1>
-    <?php $id = $_GET['id'];
+    <?phpphp $id = $_GET['id'];
             $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
             if (file_exists($pngphoto)) {
                 ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?php }?>
-            <?php if (file_exists($jpgphoto)) {
+            <?phpphp }?>
+            <?phpphp if (file_exists($jpgphoto)) {
                 ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?php }?>
-            <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
+            <?phpphp }?>
+            <?phpphp if (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
                 <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit"  name="submit">
                 </form> 
-            <?php }?>
+            <?phpphp }?>
     <div id="signup">
-      <?php
+      <?phpphp
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
       require_once('../../config/init.php');
@@ -43,7 +43,7 @@
       echo ($nickname[0]['nick_name']); ?>
     </div>
   </header>
-  <? $id = $_GET['id']; ?>
+  <?php $id = $_GET['id']; ?>
   <div id="sidebar-clone">
     <div id="iconmenu">
       <ul>
@@ -61,7 +61,7 @@
   <div id="cont">
     <h2>My Albums</h2>
     <ul>
-      <?php
+      <?phpphp
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -87,13 +87,13 @@
 
         <li>
         <a href="../artist-log/artist-log.php?id_album=<?=$album['id_album']?>&id_user=<?=$id?>">
-          <?php $result = verifyMyAlbums($id, $album);
+          <?phpphp $result = verifyMyAlbums($id, $album);
                   if ($result == 1) :
                     ?><form action="../php_actions/action_removemyalbums.php?id_user=<?=$id ?>&id_album=<?=$album ?>" id="form2" method="post">
                     <input type="submit" value="Remove from My Albums">
-                    <?php echo $name_album; ?>
+                    <?phpphp echo $name_album; ?>
                   </form>
-                  <?php endif; ?>
+                  <?phpphp endif; ?>
             <div>
               <?= $album ?>
             </div>
@@ -101,7 +101,7 @@
         </li>
 
 
-      <?php
+      <?phpphp
         $count++;
         endforeach; ?>
 

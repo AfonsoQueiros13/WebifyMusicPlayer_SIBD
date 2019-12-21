@@ -1,4 +1,4 @@
-<?php
+<?phpphp
 $id = $_GET['id'];
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;

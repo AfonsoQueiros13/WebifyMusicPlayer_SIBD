@@ -43,7 +43,7 @@
             <!-- artists -> songs or just songs? -->
             <h2>Trending Albums</h2>
             <ul>
-                <?php
+                <?phpphp
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 require_once('../../config/init.php');
@@ -68,7 +68,7 @@
                     </li>
 
 
-                <?php endforeach; ?>
+                <?phpphp endforeach; ?>
         </ul>
 
 
@@ -78,7 +78,7 @@
             <!-- artists -> songs or just songs? -->
             <h2>Albuns by Genre - Rap</h2>
             <ul>
-                <?php
+                <?phpphp
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 require_once('../../config/init.php');
@@ -102,7 +102,7 @@
                     </li>
 
 
-                <?php endforeach; ?>
+                <?phpphp endforeach; ?>
 
         </ul>
 
@@ -112,7 +112,7 @@
             <!-- artists -> songs or just songs? -->
             <h2>Artists of the Moment</h2>
             <ul>
-                <?php
+                <?phpphp
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 require_once('../../config/init.php');
@@ -138,7 +138,7 @@
                     </li>
 
 
-                <?php endforeach; ?>
+                <?phpphp endforeach; ?>
 
         </ul>
         </article>

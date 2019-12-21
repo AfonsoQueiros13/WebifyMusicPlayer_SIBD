@@ -15,20 +15,20 @@
   <header>
     <img src="../../images/logo.png" alt="logo">
     <h1>Webify</h1>
-    <?php $id = $_GET['id'];
+    <?phpphp $id = $_GET['id'];
             $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
             if (file_exists($pngphoto)) {
                 ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?}?>
-            <?if (file_exists($jpgphoto)) {
+            <?php}?>
+            <?phpif (file_exists($jpgphoto)) {
                 ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?}?>
-            <?if (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
+            <?php}?>
+            <?phpif (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
-            <?}?>
+            <?php}?>
     <div id="signup">
-      <?php
+      <?phpphp
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
       require_once('../../config/init.php');
@@ -51,7 +51,7 @@
   </div>
 
   <div id="rest">
-    <h1><?echo($nickname[0]['nick_name'])?></h1>
+    <h1><?phpecho($nickname[0]['nick_name'])?></h1>
     <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">

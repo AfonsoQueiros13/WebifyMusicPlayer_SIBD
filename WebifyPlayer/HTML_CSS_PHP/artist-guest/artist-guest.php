@@ -41,7 +41,7 @@
   <div id="content">
 
     <div id="coverart">
-      <?php
+      <?phpphp
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
       require_once('../../config/init.php');
@@ -59,12 +59,12 @@
 
     <ul>
 
-      <?php foreach ($songs as $song_name) : ?>
+      <?phpphp foreach ($songs as $song_name) : ?>
         <li> <?= $song_name['name_music'] ?> </li>
         <audio controls>
           <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
         </audio>
-      <?php endforeach; ?>
+      <?phpphp endforeach; ?>
 
     </ul>
 
