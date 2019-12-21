@@ -20,25 +20,25 @@
 
       <img src="../../images/logo.png" alt="logo">
       <h1>Webify</h1>
-      <?phpphp $id = $_GET['id'];
+      <?php $id = $_GET['id'];
             $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
             if (file_exists($pngphoto)) :
                 ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?phpphp endif;?>
-            <?phpphp if (file_exists($jpgphoto)) :
+            <?php endif;?>
+            <?php if (file_exists($jpgphoto)) :
                 ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?phpphp endif;?>
-            <?phpphp if (!file_exists($pngphoto) && !file_exists($jpgphoto)) :
+            <?php endif;?>
+            <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)) :
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
                 <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit"  name="submit">
                 </form> 
-            <?phpphp endif;?>
+            <?php endif;?>
       <div id="signup">
-        <?phpphp
+        <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         require_once('../../config/init.php');
@@ -76,7 +76,7 @@
 
     <h2>Artists</h2>
     <div id="artists">
-      <?phpphp
+      <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -104,7 +104,7 @@
         </li>
 
 
-      <?phpphp
+      <?php
         $count++;
         endforeach; ?>
 
@@ -113,7 +113,7 @@
 
     <h3>Albums</h3>
     <div id="albums">
-      <?phpphp
+      <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -146,7 +146,7 @@
         </li>
 
 
-      <?phpphp
+      <?php
       $count++;
       endforeach;
       ?>
@@ -157,7 +157,7 @@
 
     <h4>Songs</h4>
     <div id="songs">
-      <?phpphp
+      <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -190,7 +190,7 @@
         </li>
 
 
-      <?phpphp
+      <?php
         $count++;
       endforeach;
       ?>
@@ -198,7 +198,7 @@
 
     <h4>Genres</h4>
     <div id="genres">
-      <?phpphp
+      <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -231,7 +231,7 @@
         </li>
 
 
-      <?phpphp
+      <?php
       $count++;
       endforeach;
       ?>
