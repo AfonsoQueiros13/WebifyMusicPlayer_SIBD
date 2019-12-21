@@ -8,13 +8,14 @@ function insertUser($email, $nick, $password)
   $stmt = $dbh->prepare($query);
   $stmt->execute(array($email,$nick));
   $count=$stmt->fetchColumn();
-
+  echo $count;
 
 
   if ($count == 0) { //NO ENTRANCE FOR THIS E-MAIL IN DATABASE
       $query = 'INSERT INTO normal_user VALUES(?,?,?,?)';
       $stmt = $dbh->prepare($query);
       $stmt->execute(array(null, $email, $nick, sha1($password))); //NULL AUTOINCREMENTS ID
+      header('Location: ../home/home.php');
       
   }
   else //ERROR INSERTING IN DB -> ALREADY EXISTS THIS E-MAIL
