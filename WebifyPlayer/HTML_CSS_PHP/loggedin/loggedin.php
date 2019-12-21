@@ -22,14 +22,14 @@
             <?php $id = $_GET['id'];
                 $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
                 $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
-                if (file_exists($pngphoto)) 
-                    ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
+                if (file_exists($pngphoto)) ?> 
+                <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
     
-                <?if (file_exists($jpgphoto)) 
-                    ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
+                <?if (file_exists($jpgphoto)) ?> 
+                <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
     
-                <?if (!file_exists($pngphoto) && !file_exists($jpgphoto)) 
-                    ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
+                <?if (!file_exists($pngphoto) && !file_exists($jpgphoto)) ?> 
+                <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
                     
     
                 
@@ -80,7 +80,7 @@
 
                     $count = 1;
 
-                    foreach ($all_albums as $album) {
+                    foreach ($all_albums as $album): 
 
                         $album = get_album_by_id($count++);
                         ?>
@@ -95,7 +95,7 @@
                         </li>
 
 
-                    <?}?>
+                    <?php endforeach; ?>
 
 
 
@@ -118,7 +118,7 @@
                     $all_rap_albums = get_all_rap_albums();
                     $count = 0;
 
-                    foreach ($all_rap_albums as $rap_album) {
+                    foreach ($all_rap_albums as $rap_album): 
 
                         $rap_album = get_album_by_id($all_rap_albums[$count++]['id']);
                         ?>
@@ -133,7 +133,7 @@
                         </li>
 
 
-                    <?}?>
+                    <?php endforeach; ?>
                 </ul>
 
             </article>
@@ -151,10 +151,8 @@
                     $all_artists = get_all_artists();
                     $count = 0;
 
-                    foreach ($all_artists as $artist) {
-
+                    foreach ($all_artists as $artist): 
                         $artist = get_artist_by_id($all_artists[$count++]['id']);
-
                         ?>
 
                         <li>
@@ -166,7 +164,7 @@
                                 </div>
                             </a>
                         </li>
-                    <?}?>
+                    <?php endforeach; ?>
                 </ul>
             </article>
 

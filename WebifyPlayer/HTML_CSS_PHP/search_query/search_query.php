@@ -62,7 +62,7 @@
       $all_artists = searchForArtist($search);
 
       $count = 0;
-      foreach ($all_artists as $artist) {
+      foreach ($all_artists as $artist) :
         $artist = $all_artists[$count]['name'];
         $ID = get_id_by_name($artist);
         ?>
@@ -77,8 +77,7 @@
 
       <?php
         $count++;
-      }
-      ?>
+        endforeach; ?>
     </div>
 
 
@@ -102,7 +101,7 @@
 
       $count = 0;
       $count2=0;
-      foreach ($all_albums as $album) {
+      foreach ($all_albums as $album) :
         $path = get_album_image($album['nome_album']);
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $album = $all_albums[$count++]['nome_album'];
@@ -119,9 +118,8 @@
         </li>
 
 
-      <?php
-      }
-      ?>
+      <?php endforeach; ?>
+
     </div>
 
 
@@ -146,7 +144,7 @@
 
 
       $count = 0;
-      foreach ($all_musics as $music) {
+      foreach ($all_musics as $music) :
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $music = $all_musics[$count]['name_music'];
@@ -162,8 +160,8 @@
 
       <?php
         $count++;
-      }
-      ?>
+        endforeach; ?>
+
     </div>
 
     <h4>Genres</h4>
@@ -185,7 +183,7 @@
 
 
       $count = 0;
-      foreach ($allgenre as $genre) {
+      foreach ($allgenre as $genre) :
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $genre = $allgenre[$count]['gen_name'];
@@ -202,9 +200,9 @@
 
 
       <?php
-        $count++;
-      }
-      ?>
+      endforeach; ?>
+
+
     </div>
 
   </div>

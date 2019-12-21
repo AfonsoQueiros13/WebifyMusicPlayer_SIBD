@@ -60,7 +60,7 @@
           <ul>
             <?php
             $count=0;
-            foreach ($albums as $album_single) {
+            foreach ($albums as $album_single) :
               $result=$album_single['nome_album'];
               $img=get_album_image($result);
             ?>
@@ -79,7 +79,7 @@
         </ul>
 
           <?php
-          }
+          endforeach;
           ?>
 
       </div>

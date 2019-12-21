@@ -59,12 +59,12 @@
 
     <ul>
 
-      <?php foreach ($songs as $song_name) { ?>
+      <?php foreach ($songs as $song_name) : ?>
         <li> <?= $song_name['name_music'] ?> </li>
         <audio controls>
           <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
         </audio>
-      <?php } ?>
+      <?php endforeach; ?>
 
     </ul>
 

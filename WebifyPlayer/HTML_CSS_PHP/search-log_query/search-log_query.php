@@ -23,20 +23,20 @@
       <?php $id = $_GET['id'];
             $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
-            if (file_exists($pngphoto)) {
+            if (file_exists($pngphoto)) :
                 ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?}?>
-            <?if (file_exists($jpgphoto)) {
+            <?php endif;?>
+            <?php if (file_exists($jpgphoto)) :
                 ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?}?>
-            <?if (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
+            <?php endif;?>
+            <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)) :
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
                 <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit"  name="submit">
                 </form> 
-            <?}?>
+            <?php endif;?>
       <div id="signup">
         <?php
         ini_set('display_errors', 1);
@@ -91,12 +91,12 @@
       $all_artists = searchForArtist($search);
 
       $count = 0;
-      foreach ($all_artists as $artist) {
+      foreach ($all_artists as $artist) :
         $artist = $all_artists[$count]['name'];
         $ID = get_id_by_name($artist);
         ?>
         <li>
-          <a href="../selected_artist-guestmode/selected_artist.php?id=<?= $ID['id'] ?>">
+          <a href="../selected_artist-guestmode/selected_artist.php?id=<?=$artist?>">
             <div>
               <?= $artist ?>
             </div>
@@ -106,8 +106,8 @@
 
       <?php
         $count++;
-      }
-      ?>
+        endforeach; ?>
+
     </div>
 
 
@@ -130,14 +130,14 @@
       $path = get_album_image($search);
 
       $count = 0;
-      foreach ($all_albums as $album) {
+      foreach ($all_albums as $album) :
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $album = $all_albums[$count]['nome_album'];
         ?>
 
         <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+          <a href="../artist-guest/artist-guest.php?id=<?= $album?>">
             <img src="<?= $path[$count]['img_path'] ?>" alt="artistcover">
             <div>
               <?= $album ?>
@@ -147,8 +147,8 @@
 
 
       <?php
-        $count++;
-      }
+      $count++;
+      endforeach;
       ?>
     </div>
 
@@ -174,14 +174,14 @@
 
 
       $count = 0;
-      foreach ($all_musics as $music) {
+      foreach ($all_musics as $music) :
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $music = $all_musics[$count]['name_music'];
         ?>
 
         <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $music['id'] ?>">
+          <a href="../artist-guest/artist-guest.php?id=<?=$music?>">
 
             <div>
               <?= $music ?>
@@ -192,7 +192,7 @@
 
       <?php
         $count++;
-      }
+      endforeach;
       ?>
     </div>
 
@@ -215,14 +215,14 @@
 
 
       $count = 0;
-      foreach ($allgenre as $genre) {
+      foreach ($allgenre as $genre) :
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $genre = $allgenre[$count]['gen_name'];
         ?>
 
         <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $genre['id'] ?>">
+          <a href="../artist-guest/artist-guest.php?id=<?= $genre?>">
 
             <div>
               <?= $genre ?>
@@ -232,8 +232,8 @@
 
 
       <?php
-        $count++;
-      }
+      $count++;
+      endforeach;
       ?>
     </div>
 
