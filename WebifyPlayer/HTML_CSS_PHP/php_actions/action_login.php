@@ -1,4 +1,5 @@
 <?php
+  session_start();
   /*DISPLAY ERRORS*/
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -19,10 +20,13 @@
     else
     {
       $id = selectUserID($email,$password);
-      header('Location: ../loggedin/loggedin.php?id='.$id[0]['id']);
+      $_SESSION['username']=$user_data['nick_name'];
+      $_SESSION['id']=$user_data['id'];
+      $_SESSION['log']=1;
+      header('Location: ../HOMEPAGE/homepage.php');
       exit;
     }
-     
+
   } catch(Exception $e) {
     echo 'Exception -> ';
     var_dump($e->getMessage());

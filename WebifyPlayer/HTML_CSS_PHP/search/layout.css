@@ -44,7 +44,7 @@ body form input[type=submit]{
   flex-grow: 1;
 }
 
-body div#initialtext{
+body div#initialtext-search{
   grid-area: contentpage;
   align-self: center;
 }

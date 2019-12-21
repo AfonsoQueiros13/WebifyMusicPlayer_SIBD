@@ -1,51 +1,26 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<?php
+  session_start();
 
-<head>
-  <title> Webify </title>
-  <link rel="icon" type="image/gif/png" href="../../images/logo.png">
-  <meta charset="UTF-8">
-  <link href="style.css" rel=stylesheet>
-  <link href="layout.css" rel=stylesheet>
-  <link href="responsive.css" rel=stylesheet>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  include('../header.php');
+  include('../iconmenu.php');
+  include('../footer.php');
 
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  require_once('../../config/init.php');
+  require_once('../../tools/db_queries_album.php');
 
+ ?>
 
-<body>
-  <!-- TOP BAR -->
-  <header>
-
-    <img src="../../images/logo.png" alt="logo">
-    <h1>Webify</h1>
-    <div id="signup">
-      <a href="../register/register.php">Register</a>
-      <a href="../login/login.php">Login </a>
-    </div>
-
-  </header>
-
-  <!-- page content -->
-
-  <div id="sidebar-clone">
-    <div id="iconmenu">
-      <ul>
-        <li><i class="fa fa-home"></i><a href="../home/home.php">Home</a></li>
-        <li><i class="fa fa-search"></i><a href="../search/search.php">Search</a></li>
-      </ul>
-    </div>
-  </div>
-
+ <?php
+    if(isset($_SESSION['log'])==false){
+  ?>
 
   <div id="content">
 
     <div id="coverart">
       <?php
-      ini_set('display_errors', 1);
-      ini_set('display_startup_errors', 1);
-      require_once('../../config/init.php');
-      require_once('../../tools/db_queries_album.php');
+
 
       $ID = $_GET['id'];
 
@@ -57,20 +32,24 @@
       <div> <a href="../selected_artist-guestmode/selected_artist.php?id=<?= $album['id_artist'] ?>"> <?= $info['name'] ?> </a> </div>
     </div>
 
-    <ul>
+    <div id="songs">
+      <ul>
 
-      <?php foreach ($songs as $song_name) { ?>
-        <li> <?= $song_name['name_music'] ?> </li>
-        <audio controls>
-          <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
-        </audio>
-      <?php } ?>
+        <?php foreach ($songs as $song_name) { ?>
+          <li> <?= $song_name['name_music'] ?> </li>
+          <audio controls>
+            <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
+          </audio>
+        <?php } ?>
 
-    </ul>
+      </ul>
+    </div>
 
   </div>
 
+<?php } ?>
 
-</body>
 
-</html>
+
+
+<?php if(isset($_SESSION['log'])==true){} ?>
