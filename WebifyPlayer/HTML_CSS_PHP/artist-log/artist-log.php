@@ -19,23 +19,23 @@
 
     <img src="../../images/logo.png" alt="logo">
     <h1>Webify</h1>
-    <?phpphp $id = $_GET['id_user'];
+    <?php $id = $_GET['id_user'];
             $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
             if (file_exists($pngphoto))?> 
             <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?phpphp if (file_exists($jpgphoto))?> 
+            <?php if (file_exists($jpgphoto))?> 
             <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?phpphp if (!file_exists($pngphoto) && !file_exists($jpgphoto)):?> 
+            <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)):?> 
             <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
                 <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit"  name="submit">
                 </form> 
-            <?phpphp endif;?>
+            <?php endif;?>
     <div id="signup">
-      <?phpphp
+      <?php
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
       error_reporting(E_ALL);
@@ -67,7 +67,7 @@
   <div id="content">
 
     <div id="coverart">
-      <?phpphp
+      <?php
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
       error_reporting(E_ALL);
@@ -83,7 +83,7 @@
       $info = get_album_and_artist_info($id_album);
       ?>
       <img src="<?= $album['img_path'] ?>" alt="artist_img">
-      <?phpphp
+      <?php
           ini_set('display_errors', 1);
           ini_set('display_startup_errors', 1);
           require_once('../../config/init.php');
@@ -95,23 +95,23 @@
           ?><form action="../php_actions/action_myalbums.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>" id="form" method="post">
           <input type="submit" value="Add to MyAlbums">
           </form>
-          <?phpphp endif; ?>
-          <?phpphp $result = verifyMyAlbums($id_user, $id_album);
+          <?php endif; ?>
+          <?php $result = verifyMyAlbums($id_user, $id_album);
           if ($result == 1):
           ?> <a> Album added in MyAlbums </a>
-          <?phpphp endif; ?>
+          <?php endif; ?>
       <div> <?= $info['name'] ?> </div>
     </div>
 
     <ul>
 
-      <?phpphp foreach ($songs as $song_name): ?>
+      <?php foreach ($songs as $song_name): ?>
             <li> <?= $song_name['name_music'] ?> </li>
 
             <audio controls>
               <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
             </audio>
-            <?phpphp
+            <?php
               ini_set('display_errors', 1);
               ini_set('display_startup_errors', 1);
               error_reporting(E_ALL);
@@ -125,13 +125,13 @@
               ?><form action="../php_actions/action_mysongs.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>&id_music=<?=$song_name['id']?>" id="form" method="post">
               <input type="submit" value="Add to MySongs">
               </form>
-              <?phpphp endif; ?>
-              <?phpphp
+              <?php endif; ?>
+              <?php
               $result = verifyMySongs($id_user, $id_music);
               if ($result == 1):
               ?> <a> Music added in MySongs </a>
-              <?phpphp endif; ?>
-      <?phpphp endforeach; ?>
+              <?php endif; ?>
+      <?php endforeach; ?>
 
 
     </ul>

@@ -40,7 +40,18 @@
     <form action="../php_actions/action_register.php" method="POST">
         <input type="text" name="email" placeholder="E-mail"><br>
         <input type="text" name="nick" placeholder="Nickname"> <br>
-        <input type="text" name="password" placeholder="Password"> <br>
+        <input type="password" name="password" id="myInput" placeholder="password"> <br>
+        <input type="checkbox" onclick="myFunction()">Show Password
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";    
+            } else {
+                x.type = "password";
+            }
+            }
+        </script>
         <input type="submit" value="Register to Webify">
     </form>
 

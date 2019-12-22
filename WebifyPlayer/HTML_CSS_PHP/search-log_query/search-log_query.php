@@ -31,11 +31,6 @@
             <?php endif;?>
             <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)) :
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
-                <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="submit"  name="submit">
-                </form> 
             <?php endif;?>
       <div id="signup">
         <?php

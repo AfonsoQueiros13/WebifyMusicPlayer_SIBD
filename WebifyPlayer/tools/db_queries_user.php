@@ -1,5 +1,5 @@
 
-<?phpphp
+<?php
 /*INSERT USER IN DATABASE*/
 function insertUser($email, $nick, $password)
 {

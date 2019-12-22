@@ -47,7 +47,7 @@
 
     <h2>Artists</h2>
     <div id="artists">
-      <?phpphp
+      <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -75,7 +75,7 @@
         </li>
 
 
-      <?phpphp
+      <?php
         $count++;
         endforeach; ?>
     </div>
@@ -83,7 +83,7 @@
 
     <h3>Albums</h3>
     <div id="albums">
-      <?phpphp
+      <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -118,7 +118,7 @@
         </li>
 
 
-      <?phpphp endforeach; ?>
+      <?php endforeach; ?>
 
     </div>
 
@@ -127,7 +127,7 @@
 
     <h4>Songs</h4>
     <div id="songs">
-      <?phpphp
+      <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -158,7 +158,7 @@
         </li>
 
 
-      <?phpphp
+      <?php
         $count++;
         endforeach; ?>
 
@@ -166,7 +166,7 @@
 
     <h4>Genres</h4>
     <div id="genres">
-      <?phpphp
+      <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
@@ -199,26 +199,13 @@
         </li>
 
 
-      <?phpphp
+      <?php
       endforeach; ?>
 
 
     </div>
 
   </div>
-
-
-
-
-
-</body>
-
-</html>
-
-</div>
-
-
-
 
 
 </body>

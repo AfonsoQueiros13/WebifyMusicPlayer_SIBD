@@ -18,25 +18,20 @@
     <header>
       <img src="../../images/logo.png" alt="logo">
       <h1>Webify</h1>
-      <?phpphp $id = $_GET['id'];
+      <?php $id = $_GET['id'];
             $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
             if (file_exists($pngphoto)) :
                 ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?phpphp endif;?>
-            <?phpphp if (file_exists($jpgphoto)) :
+            <?php endif;?>
+            <?php if (file_exists($jpgphoto)) :
                 ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?phpphp endif;?>
-            <?phpphp if (!file_exists($pngphoto) && !file_exists($jpgphoto)) :
+            <?php endif;?>
+            <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)) :
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
-                <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="submit"  name="submit">
-                </form> 
-            <?phpphp endif;?>
+            <?php endif;?>
       <div id="signup">
-      <?phpphp
+      <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         require_once('../../config/init.php');
@@ -70,10 +65,10 @@
     <!-- page content -->
     <!-- include textbox for searching songs, artists, playlists(?),.. -->
     <!-- should also include sidebar -->
-
+           
     <form action="../search-log_query/search-log_query.php?id=<?=$_GET['id']?>" method="post">
-      <input type="text" name="searchquery" placeholder="Type anything . . .">
-      <input type="submit" value="Search">
+    <input type="text" id= "searchquery" name="searchquery" placeholder="Type anything . . .">
+    <input type="submit" value="Search">
     </form>
 
     <div id="initialtext">

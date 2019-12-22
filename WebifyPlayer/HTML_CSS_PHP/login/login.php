@@ -36,7 +36,18 @@
     <!-- <div id="signin"> -->
     <form action="../php_actions/action_login.php" method="post">
         <input type="text" name="email" placeholder="email"> <br>
-        <input type="text" name="password" placeholder="password"> <br>
+        <input type="password" name="password" id="myInput" placeholder="password"> <br>
+        <input type="checkbox" onclick="myFunction()">Show Password
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";    
+            } else {
+                x.type = "password";
+            }
+            }
+        </script>
         <input type="submit" value="Log in">
     </form>
     <!-- </div> -->

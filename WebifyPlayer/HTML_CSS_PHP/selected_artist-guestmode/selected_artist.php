@@ -37,7 +37,7 @@
 
       <div id="main">
 
-        <?phpphp
+        <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         require_once('../../config/init.php');
@@ -58,7 +58,7 @@
         </div>
 
           <ul>
-            <?phpphp
+            <?php
             $count=0;
             foreach ($albums as $album_single) :
               $result=$album_single['nome_album'];
@@ -69,16 +69,16 @@
                 <li> <?=$album_single['nome_album'] ?> </li>
           </ul>
 
-        <?phpphp $songs=searchForMusic($album_single['nome_album']); ?>
+        <?php $songs=searchForMusic($album_single['nome_album']); ?>
 
         <h4>Songs</h4>
         <ul>
-          <?phpphp  foreach ($songs as $song_name) { ?>
+          <?php  foreach ($songs as $song_name) { ?>
               <li> <?= $song_name['name_music'] ?> </li>
-          <?phpphp } ?>
+          <?php } ?>
         </ul>
 
-          <?phpphp
+          <?php
           endforeach;
           ?>
 
