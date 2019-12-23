@@ -35,7 +35,7 @@
       require_once('../../tools/db_queries_user.php');
       $id = $_GET['id'];
       $nickname = selectUserNickfromID($id);
-      echo($nickname[0]['nick_name']);?>
+      echo($nickname['nick_name']);?>
   </header>
 
   <div id="sidebar-clone">
@@ -51,7 +51,7 @@
   </div>
 
   <div id="rest">
-    <h1><?php echo($nickname[0]['nick_name'])?></h1>
+    <h1><?php echo($nickname['nick_name'])?></h1>
     <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
