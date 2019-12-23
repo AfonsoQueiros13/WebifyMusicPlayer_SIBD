@@ -20,13 +20,13 @@
             $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
             if (file_exists($pngphoto)) {
                 ?> <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-            <?php}?>
-            <?phpif (file_exists($jpgphoto)) {
+            <?php } ?>
+            <?php if (file_exists($jpgphoto)) {
                 ?> <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
-            <?php}?>
-            <?phpif (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
+            <?php } ?>
+            <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)) {
                 ?> <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
-            <?php}?>
+            <?php } ?>
     <div id="signup">
       <?php
       ini_set('display_errors', 1);
@@ -51,7 +51,7 @@
   </div>
 
   <div id="rest">
-    <h1><?phpecho($nickname[0]['nick_name'])?></h1>
+    <h1><?php echo($nickname[0]['nick_name'])?></h1>
     <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
