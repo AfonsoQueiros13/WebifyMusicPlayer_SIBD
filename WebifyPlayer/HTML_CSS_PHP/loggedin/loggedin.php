@@ -43,7 +43,7 @@
                 require_once('../../tools/db_queries_user.php');
                 
                 $nickname = selectUserNickfromID($id);
-                echo ($nickname[0]['nick_name']); ?>
+                ?><a href="../userprofile/user.php?id=<?=$id?>"><?php echo ($nickname[0]['nick_name']);?></a> 
             </div>
 
         </header>
