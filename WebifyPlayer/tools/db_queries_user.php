@@ -1,4 +1,3 @@
-
 <?php
 /*INSERT USER IN DATABASE*/
 function insertUser($email, $nick, $password)
@@ -8,20 +7,19 @@ function insertUser($email, $nick, $password)
   $stmt = $dbh->prepare($query);
   $stmt->execute(array($email,$nick));
   $count=$stmt->fetchColumn();
-
+  echo $count;
 
 
   if ($count == 0) { //NO ENTRANCE FOR THIS E-MAIL IN DATABASE
       $query = 'INSERT INTO normal_user VALUES(?,?,?,?)';
       $stmt = $dbh->prepare($query);
       $stmt->execute(array(null, $email, $nick, sha1($password))); //NULL AUTOINCREMENTS ID
-      
+      header('Location: ../HOMEPAGE/homepage.php');
+
   }
   else //ERROR INSERTING IN DB -> ALREADY EXISTS THIS E-MAIL
   {
-    //echo ("<script>alert('E-mail already exists!.');</script>");
     echo ("<script>alert('E-mail or Username already exists!');setTimeout(\"location.href = '../register/register.php';\",100);</script>");
-    //header('Location: ../HTML_CSS/register/register.php');
 
   }
 }

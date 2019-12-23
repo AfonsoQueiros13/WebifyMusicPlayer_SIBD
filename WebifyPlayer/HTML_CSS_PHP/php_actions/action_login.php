@@ -20,8 +20,9 @@
     else
     {
       $id = selectUserID($email,$password);
-      $_SESSION['username']=$user_data['nick_name'];
-      $_SESSION['id']=$user_data['id'];
+      $_SESSION['username']=$user_data[0]['nick_name'];
+      $_SESSION['email']=$email;
+      $_SESSION['id']=$user_data[0]['id'];
       $_SESSION['log']=1;
       header('Location: ../HOMEPAGE/homepage.php');
       exit;

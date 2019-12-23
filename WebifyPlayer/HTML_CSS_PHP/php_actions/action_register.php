@@ -11,9 +11,7 @@
   $nick = $_POST['nick'];
   $password = $_POST['password'];
   try {
-    $result = insertUser($email, $nick, $password);
-    if ($result !=0)
-      header('Location: ../home/home.php');
+    insertUser($email, $nick, $password);
   } catch(Exception $e) {
     echo 'Exception -> ';
     var_dump($e->getMessage());
