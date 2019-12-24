@@ -39,12 +39,12 @@
   <!-- should also include sidebar -->
 
   <form action="search_query.php" method="post">
-    <input type="text" name="searchquery" placeholder="Type anything . . .">
+    <input type="text"  id = "search" name="searchquery" placeholder="Type anything . . .">
     <input type="submit" value="Search">
   </form>
   
   <script type="text/javascript">
-        document.getElementById("searchquery").value = getSavedValue("searchquery");    // set the value to this input
+        document.getElementById("search").value = getSavedValue("search");    // set the value to this input
         /* Here you can add more inputs to set value. if it's saved */
 
         //Save the value function - save it to localStorage as (ID, VALUE)
@@ -61,6 +61,13 @@
             }
             return localStorage.getItem(v);
         }
+</script>
+
+<script>
+    $("#searchquery").on( 
+          "propertychange change keyup paste input", function() { 
+          window.location = "../search_query/search_query.php"
+        }); 
 </script>
 
 
