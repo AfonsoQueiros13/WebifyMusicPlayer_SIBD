@@ -43,6 +43,7 @@
     <input type="submit" value="Search">
   </form>
 
+
   <div id="initialtext">
 
     <h2>Search for anything</h2>
