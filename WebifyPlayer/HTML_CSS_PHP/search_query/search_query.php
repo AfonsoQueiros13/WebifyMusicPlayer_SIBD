@@ -39,7 +39,7 @@
   <!-- should also include sidebar -->
 
   <form action="search_query.php" method="post">
-    <input type="text"  id = "search" name="searchquery" placeholder="Type anything . . .">
+    <input type="text"  id = "search" name="searchquery" placeholder="Type anything . . ." onkeyup='saveValue(this);'>
     <input type="submit" value="Search">
   </form>
   
@@ -64,9 +64,9 @@
 </script>
 
 <script>
-    $("#searchquery").on( 
+    $("#search").on( 
           "propertychange change keyup paste input", function() { 
-          window.location = "../search_query/search_query.php"
+          window.location = "search_query.php"
         }); 
 </script>
 
