@@ -39,7 +39,7 @@
   <!-- should also include sidebar -->
 
   <form action="../search_query/search_query.php" method="POST">
-    <input type="text" name="searchquery" placeholder="Type anything . . .">
+    <input type="text" name="searchquery" placeholder="Type anything . . ." onkeyup='saveValue(this);'>
     <input type="submit" value="Search">
   </form>
 
