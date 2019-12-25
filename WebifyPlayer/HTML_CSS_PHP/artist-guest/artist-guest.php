@@ -62,6 +62,8 @@
   $id_album = $_GET ['id'];
   $result = verifyMyAlbums($id_user, $id_album);
   $album = get_album_by_id($id_album);
+  $songs = get_songs_in_album($album['nome_album'], $id_album);
+  $info = get_album_and_artist_info($id_album);
   ?>
 
   <div id="content">
@@ -82,16 +84,40 @@
         <?php } ?>
 
         <div>
-          <?= $album['nome_album'] ?>
+          <a href="../selected_artist-guestmode/selected_artist.php?id=<?= $album['id_artist'] ?>"> <?= $info['name'] ?> </a>
         </div>
     </div>
 
     <ul>
+      <?php foreach ($songs as $song_name): ?>
+            <li> <?= $song_name['name_music'] ?> </li>
 
-
-
+            <audio controls>
+              <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
+            </audio>
+            <?php
+              ini_set('display_errors', 1);
+              ini_set('display_startup_errors', 1);
+              error_reporting(E_ALL);
+              require_once('../../config/init.php');
+              require_once('../../tools/db_queries_music.php');
+              $id_user = $_SESSION['id'];
+              $id_album = $_GET['id'];
+              $id_music = $song_name['id'];
+              $result = verifyMySongs($id_user, $id_music);
+              if ($result == 0):
+              ?><form action="../php_actions/action_mysongs.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>&id_music=<?=$song_name['id']?>" id="form" method="post">
+              <input type="submit" value="Add to MySongs">
+              </form>
+              <?php endif; ?>
+              <?php
+              $result = verifyMySongs($id_user, $id_music);
+              if ($result == 1):
+              ?> <a> Music added in MySongs </a>
+              <?php endif; ?>
+      <?php endforeach; ?>
     </ul>
 
-
+  </div>
 
 <?php } ?>

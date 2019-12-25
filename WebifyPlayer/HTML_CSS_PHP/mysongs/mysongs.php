@@ -32,8 +32,9 @@ error_reporting(E_ALL);
 
           <li>
             <div>
-              <? $musicsids = selectMusicIDbyName($music['name_music']); ?>
-              <a><?= $musicID = $musicsids[0]['id']; ?>
+              <? $musicids = selectMusicIDbyName($music['name_music']); ?>
+              <?php $musicID = $musicids[0]['id']; ?>
+              <a><?= $musicID ?>
                 <? $result = verifyMySongs($id, $musicID);
                   if ($result == 1) {
                     ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $musicID ?>" id="form2" method="post">
