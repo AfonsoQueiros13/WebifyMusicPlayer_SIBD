@@ -44,7 +44,7 @@ session_start();
 
     <div id="signup">
 
-      <a href="#"><?php echo $_SESSION['username']; ?></a>
+      <a href="../userprofile/user.php"><?php echo $_SESSION['username']; ?></a>
 
       <?php
 
