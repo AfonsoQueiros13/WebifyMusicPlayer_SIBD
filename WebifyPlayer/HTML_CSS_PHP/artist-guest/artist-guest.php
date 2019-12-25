@@ -64,6 +64,7 @@
   $album = get_album_by_id($id_album);
   $songs = get_songs_in_album($album['nome_album'], $id_album);
   $info = get_album_and_artist_info($id_album);
+
   ?>
 
   <div id="content">
@@ -105,11 +106,11 @@
               $id_album = $_GET['id'];
               $id_music = $song_name['id'];
               $result = verifyMySongs($id_user, $id_music);
-              if ($result == 0):
-              ?><form action="../php_actions/action_mysongs.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>&id_music=<?=$song_name['id']?>" id="form" method="post">
-              <input type="submit" value="Add to MySongs">
-              </form>
-              <?php endif; ?>
+              if ($result == 0){
+                ?><form action="../php_actions/action_mysongs.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>&id_music=<?=$song_name['id']?>" id="form" method="post">
+                <input type="submit" value="Add to MySongs">
+                </form>
+            <?php } ?>
               <?php
               $result = verifyMySongs($id_user, $id_music);
               if ($result == 1):

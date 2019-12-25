@@ -28,16 +28,19 @@ error_reporting(E_ALL);
 
         $count = 0;
         foreach ($allmusics as $music) {
+          $yo=selectMusicIDbyName($music['name_music']);
+        //  echo $yo[0]['id'];
           ?>
 
           <li>
             <div>
-              <? $musicids = selectMusicIDbyName($music['name_music']); ?>
-              <?php $musicID = $musicids[0]['id']; ?>
-              <a><?= $musicID ?>
-                <? $result = verifyMySongs($id, $musicID);
+              <?// $musicids = selectMusicIDbyName($music['name_music']); ?>
+
+              <? // $musicids[0]['id']; ?>
+              <a><?= $music['name_music'] ?>
+                <? $result = verifyMySongs($id, $yo[0]['id']);
                   if ($result == 1) {
-                    ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $musicID ?>" id="form2" method="post">
+                    ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $yo[0]['id'] ?>" id="form2" method="post">
                     <input type="submit" value="Remove from My Songs">
                     <? echo $music['name_music']; ?>
                   </form>
