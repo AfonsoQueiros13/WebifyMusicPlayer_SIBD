@@ -52,4 +52,46 @@
 
 
 
-<?php if(isset($_SESSION['log'])==true){} ?>
+<?php if(isset($_SESSION['log'])==true){
+  require_once('../../config/init.php');
+  require_once('../../tools/db_queries_album.php');
+
+  require_once('../../tools/db_queries_music.php');
+
+  $id_user = $_SESSION['id'];
+  $id_album = $_GET ['id'];
+  $result = verifyMyAlbums($id_user, $id_album);
+  $album = get_album_by_id($id_album);
+  ?>
+
+  <div id="content">
+
+    <div id="coverart">
+
+      <img src="<?= $album['img_path'] ?>" alt="artist_img">
+      <?php
+          if ($result == 0){?>
+            <form action="../php_actions/action_myalbums.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>" id="form" method="post">
+              <input type="submit" value="Add to MyAlbums">
+            </form>
+
+        <?php } ?>
+
+        <?php if($result == 1){ ?>
+          <a> Album added in MyAlbums </a>
+        <?php } ?>
+
+        <div>
+          <?= $album['nome_album'] ?>
+        </div>
+    </div>
+
+    <ul>
+
+
+
+    </ul>
+
+
+
+<?php } ?>
