@@ -1,5 +1,6 @@
 <?php
-$id = $_GET['id'];
+session_start();
+$id = $_SESSION['id'];
 $string = "ola".$id;
 echo ($string);
 
@@ -42,7 +43,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        header('Location: ../userprofile/user.php);
+        header('Location: ../userprofile/user.php');
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
