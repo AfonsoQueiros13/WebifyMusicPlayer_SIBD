@@ -10,7 +10,7 @@ include('../footer.php');
     <div id="login">
       <form action="../php_actions/action_login.php" method="post">
           <input type="text" name="email" placeholder="email"> <br>
-          <input type="text" name="password" placeholder="password"> <br>
+          <input type="password" name="password" placeholder="password"> <br>
           <input type="submit" value="Log in">
       </form>
     </div>

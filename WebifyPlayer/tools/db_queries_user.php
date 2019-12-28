@@ -14,6 +14,8 @@ function insertUser($email, $nick, $password)
       $query = 'INSERT INTO normal_user VALUES(?,?,?,?)';
       $stmt = $dbh->prepare($query);
       $stmt->execute(array(null, $email, $nick, sha1($password))); //NULL AUTOINCREMENTS ID
+      unset($_SESSION['value']);
+      unset($_SESSION['nick']);
       header('Location: ../HOMEPAGE/homepage.php');
 
   }

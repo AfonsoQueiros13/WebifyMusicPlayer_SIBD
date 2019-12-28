@@ -2,6 +2,8 @@
   session_start();
 
   $_SESSION['log'] = NULL;
+  $_SESSION['value']=NULL;
+  $_SESSION['nick']=NULL;
 
   include('../header.php');
   include('../iconmenu.php');

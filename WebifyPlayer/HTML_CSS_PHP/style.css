@@ -213,6 +213,16 @@ body div#login form input[type=text]{
   margin-bottom: 1em;
 }
 
+body div#login form input[type=password]{
+  border-style: hidden;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
 body div#login form input[type=submit]{
   background-color: #262626;
   color: #adb3b3;
@@ -233,6 +243,16 @@ body div#login{
 /*      Register        */
 
 body div#register form input[type=text]{
+  border-style: hidden;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
+body div#register form input[type=password]{
   border-style: hidden;
   font-size: 1em;
   padding: 1em 1em 1em 1em;
