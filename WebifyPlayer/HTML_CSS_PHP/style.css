@@ -1,0 +1,401 @@
+/*GENERAL SETTINGS*/
+
+body{
+  background-color:  #121212;
+}
+
+body header{
+  color: white;
+  background-color: #0b0b0b;
+  font-family: "Georgia", serif;
+  /* border-radius: 50px; */
+  margin-bottom: 1em;
+}
+
+body header img{
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 75px;
+}
+
+body header div#signup{
+  align-self: center;
+}
+
+body header div#signup img{
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 75px;
+  
+}
+
+body header div#signup a{
+  text-decoration: none;
+  color:white;
+  padding:1em 1em 1em 1em;
+
+}
+
+body header div#signup a:nth-child(1){ /*  Register  */
+  position: relative;
+  top: -15px; /* This will move it 20px up */
+  right: 20px; /* This will move it 20px to the right */
+  border-radius: 25px;
+  border: 2px solid #b2b2b2;
+}
+
+body header div#signup a:nth-child(2){ /*  Login     */
+  padding: 1em 1.5em 1em 1.5em;
+  margin-right: 2em;
+  background-color: #034f84;
+  border-radius: 25px;
+}
+
+body div#iconmenu-clone{
+  background-color: #121212;
+}
+
+body div#iconmenu{
+  background-color: #282828;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color:white;
+}
+
+body div#iconmenu ul{
+  list-style-type: none;
+}
+
+body div#iconmenu ul li{
+  margin-top: 2em;
+  margin-right: 2em;
+  font-size: 1em;
+}
+
+body div#iconmenu ul li i{
+  font-size: 1.5em;
+  margin-right: 1em;
+}
+
+body div#iconmenu ul li a{
+  text-decoration: none;
+  color:grey;
+
+}
+
+
+
+body div#iconmenu ul>li:nth-child(1)>a {
+  color:white;
+  border-style: hidden hidden hidden solid;
+  border-color: #034f84;
+}
+
+
+
+
+body div#rest{
+  margin-top: 2em;
+}
+
+body div#rest article h2{ /* TRENDING,... */
+  color:white;
+  margin-left: 2em;
+  margin-top: 3em;
+}
+
+body div#rest>article>ul{
+  list-style-type: none;
+}
+
+body div#rest>article ul li{  /*MUSICS / ARTISTS*/
+  color: #adb3b3;
+  background-color: #262626;
+  border-radius: 25px;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 1em 1em 1em 1em;
+}
+
+body div#rest>article>ul li img{
+  max-width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body  div#rest>article ul li div{
+  margin-top: .5em;
+  text-align: center;
+
+}
+
+body  div#rest>article ul li a{
+  text-decoration: none;
+  color: #adb3b3;
+}
+
+
+
+
+/*       SEARCH-PAGE      */
+
+
+body div#search form input[type=text]{
+  margin-left: 1em;
+  border-style: hidden;
+  font-size: 2em;
+  padding: 1em 1em 1em 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+body div#search form input[type=submit]{
+  margin-right: 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-style: hidden;
+  font-size: 2em;
+  padding: 1em 1em 1em 1em;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+body div#initialtext-search h2{
+  color:white;
+  text-align: center;
+  font-size: 200%;
+}
+
+body div#initialtext-search h3{
+  color:#adb3b3;
+  text-align: center;
+}
+
+
+
+/*      SEARCH-QUERY    */
+
+
+body div#initialtext h1, div#initialtext h2, div#initialtext h3, div#initialtext h4, div#initialtext h5{
+  color:white;
+  text-align: start;
+  font-size: 200%;
+  margin-left: 2em;
+}
+
+body  div#initialtext div{
+  color:white;
+  margin-left: 6em;
+  list-style-type: none;
+
+}
+
+body div#initialtext div ul li{
+  list-style-type: none;
+}
+
+
+body div#initialtext div ul li a{
+  text-decoration: none;
+}
+
+
+body div#initialtext div ul li img{
+  max-width: 200px;
+}
+
+
+
+/*      LOGIN      */
+
+
+body div#login form input[type=text]{
+  border-style: hidden;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
+body div#login form input[type=password]{
+  border-style: hidden;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
+body div#login form input[type=submit]{
+  background-color: #262626;
+  color: #adb3b3;
+  border-style: hidden;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  border-radius: 25px;
+  margin-top: 2em;
+}
+
+body div#login{
+  justify-self:center;
+  align-self:center;
+}
+
+
+
+/*      Register        */
+
+body div#register form input[type=text]{
+  border-style: hidden;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
+body div#register form input[type=password]{
+  border-style: hidden;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  background-color: #262626;
+  color: #adb3b3;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
+body div#register form input[type=submit]{
+  background-color: #262626;
+  color: #adb3b3;
+  border-style: hidden;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  border-radius: 25px;
+  margin-top: 2em;
+}
+
+body div#register{
+  justify-self:center;
+  align-self:center;
+}
+
+
+
+
+/*    ARTIST-GUEST (when clicking an album)      */
+
+
+body div#content div#coverart img{
+  margin-bottom: 1em;
+  max-width: 300px;
+  display: block;
+  border-radius: 25px;
+}
+
+
+
+body div#content div#coverart div{
+  color:white;
+  margin-bottom: 1em;
+}
+
+body div#content div#songs ul{
+  list-style-type: none;
+}
+
+body div#content div#songs ul li {
+  color:white;
+  background-color: #262626;
+  border-radius: 75px;
+  margin-top: 1em;
+}
+
+body div#content div#coverart div a{
+  text-decoration: none;
+  color:white;
+}
+
+body div#content div#coverart form{
+  justify-self: center;
+}
+
+body div#content div#coverart input{
+  background-color: #262626;
+  border-style: hidden;
+  border-radius: 75px;
+  color: #adb3b3;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  margin-bottom: 2em;
+}
+
+body div#adds{
+  justify-content: center;
+}
+
+body div#adds input{
+  background-color: #262626;
+  border-style: hidden;
+  border-radius: 75px;
+  color: #adb3b3;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  margin-bottom: 2em;
+}
+
+/*      SELECTED-ARTIST          */
+
+body div#content div#main img{
+  max-width: 250px;
+}
+
+body div#main h2, div#main h3, div#main h4{
+  color:white;
+}
+
+body div#main li{
+  text-decoration: none;
+  list-style-type: none;
+  color: grey;
+}
+
+
+/*     MY SONGS       */
+
+body div#cont h2{
+  color:white;
+}
+
+body div#cont ul li{
+  color:white;
+  list-style-type: none;
+}
+
+
+
+/*     MY ALBUMS       */
+
+
+
+body div#cont div{
+  color:white;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/*    Profile     */
+
+
+
+body div#cont div{
+  color:white;
+  text-decoration: none;
+  list-style-type: none;
+}

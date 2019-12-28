@@ -1,4 +1,3 @@
-
 <?php
 /*INSERT USER IN DATABASE*/
 function insertUser($email, $nick, $password)
@@ -15,8 +14,15 @@ function insertUser($email, $nick, $password)
       $query = 'INSERT INTO normal_user VALUES(?,?,?,?)';
       $stmt = $dbh->prepare($query);
       $stmt->execute(array(null, $email, $nick, sha1($password))); //NULL AUTOINCREMENTS ID
+<<<<<<< HEAD
       header('Location: ../home/home.php');
       
+=======
+      unset($_SESSION['value']);
+      unset($_SESSION['nick']);
+      header('Location: ../HOMEPAGE/homepage.php');
+
+>>>>>>> REFORMAT
   }
   else //ERROR INSERTING IN DB -> ALREADY EXISTS THIS E-MAIL
   {

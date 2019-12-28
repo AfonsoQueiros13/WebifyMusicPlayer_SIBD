@@ -14,7 +14,7 @@
   try {
     insertMySong($id_user,$id_music,$id_album); //RETURNS FOR $user_data db information for this user
 
-      } 
+      }
       catch(Exception $e) {
         echo 'Exception -> ';
         var_dump($e->getMessage());
