@@ -61,7 +61,7 @@ function get_artist_name_by_id($id){
 
 
 function insertMyAlbum($id_user,$id_album){
- 
+
   global $dbh;
   $query = "SELECT * FROM liked_albums WHERE id_user = ? and id_album= ? ";
   $stmt = $dbh->prepare($query);
@@ -72,8 +72,8 @@ function insertMyAlbum($id_user,$id_album){
       $query = 'INSERT INTO liked_albums VALUES(?,?)';
       $stmt = $dbh->prepare($query);
       $stmt->execute(array($id_user, $id_album)); //NULL AUTOINCREMENTS ID
-      header('Location: ../artist-log/artist-log.php?id_album='.$id_album .'&id_user=' . $id_user);
-  } 
+      header('Location: ../artist-guest/artist-guest.php?id='.$id_album);
+  }
 
 }
 
@@ -87,7 +87,7 @@ function verifyMyAlbums($id_user, $id_album)
     $count = $stmt->fetchColumn();
 
     if ($count == 0)  //NO ENTRANCE FOR THIS MUSIC IN DATABASE LIKED_MUSICS
-        return 0; 
+        return 0;
     else
         return 1;
 }

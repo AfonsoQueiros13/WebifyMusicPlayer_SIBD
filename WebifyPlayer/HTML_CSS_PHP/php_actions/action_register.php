@@ -1,4 +1,5 @@
 <?php
+  session_start();
   /*DISPLAY ERRORS*/
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -10,8 +11,30 @@
   $email = $_POST['email'];
   $nick = $_POST['nick'];
   $password = $_POST['password'];
+  $_SESSION['value']=$email;
+  $_SESSION['nick']=$nick;
+
+  if($email == null){
+    echo ("<script>alert('please insert an email');setTimeout(\"location.href = '../register/register.php';\",100);</script>");
+    return;
+  }
+
+  if($nick == null ){
+    echo ("<script>alert('please insert a valid nickname!');setTimeout(\"location.href = '../register/register.php';\",100);</script>");
+    return;
+  }
+
+  if($password == null){
+    echo ("<script>alert('please type a password');setTimeout(\"location.href = '../register/register.php';\",100);</script>");
+    return;
+  }
+
   try {
     insertUser($email, $nick, $password);
+<<<<<<< HEAD
+=======
+
+>>>>>>> REFORMAT
   } catch(Exception $e) {
     echo 'Exception -> ';
     var_dump($e->getMessage());

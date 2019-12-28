@@ -1,4 +1,5 @@
 <?php
+  session_start();
   /*DISPLAY ERRORS*/
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -10,6 +11,7 @@
 
   $email = $_POST['email'];
   $password = $_POST['password'];
+  $_SESSION['value']=$email;
   try {
     $user_data = selectUser($email,$password); //RETURNS FOR $user_data db information for this user
     if(!$user_data)
@@ -19,10 +21,15 @@
     else
     {
       $id = selectUserID($email,$password);
-      header('Location: ../loggedin/loggedin.php?id='.$id[0]['id']);
+      $_SESSION['username']=$user_data[0]['nick_name'];
+      $_SESSION['email']=$email;
+      $_SESSION['id']=$user_data[0]['id'];
+      $_SESSION['log']=1;
+      unset($_SESSION['value']);
+      header('Location: ../HOMEPAGE/homepage.php');
       exit;
     }
-     
+
   } catch(Exception $e) {
     echo 'Exception -> ';
     var_dump($e->getMessage());

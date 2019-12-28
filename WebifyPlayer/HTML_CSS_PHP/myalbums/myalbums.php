@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -55,6 +56,26 @@
       </ul>
     </div>
   </div>
+=======
+<?php
+session_start();
+include('../header.php');
+include('../iconmenu.php');
+include('../footer.php');
+
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+
+require_once('../../config/init.php');
+require_once('../../tools/db_queries_album.php');
+
+$id = $_SESSION['id'];
+ ?>
+>>>>>>> REFORMAT
 
 
 
@@ -62,40 +83,46 @@
     <h2>My Albums</h2>
     <ul>
       <?php
-      /*DISPLAY ERRORS*/
-      ini_set('display_errors', 1);
-      ini_set('display_startup_errors', 1);
-      error_reporting(E_ALL);
-
-      /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
-      require_once('../../config/init.php');
-      require_once('../../tools/db_queries_album.php');
 
 
       #$searchmusic = $_POST['searchquery'];
-      $id = $_GET['id'];
+
       $allalbums = selectMyAlbums($id);
-      
+
 
       $count = 0;
+<<<<<<< HEAD
       foreach ($allalbums as $album) :
         
         $album = $allalbums[$count];
+=======
+      foreach ($allalbums as $album) {
+
+        $album = $allalbums[$count]['id_album'];
+>>>>>>> REFORMAT
         $name_album = get_album_by_id($album);
 
         ?>
 
         <li>
+<<<<<<< HEAD
         <a href="../artist-log/artist-log.php?id_album=<?=$album['id_album']?>&id_user=<?=$id?>">
           <?php $result = verifyMyAlbums($id, $album);
                   if ($result == 1) :
                     ?><form action="../php_actions/action_removemyalbums.php?id_user=<?=$id ?>&id_album=<?=$album ?>" id="form2" method="post">
                     <input type="submit" value="Remove from My Albums">
                     <?php echo $name_album; ?>
+=======
+        <a href="../artist-guest/artist-guest.php?id=<?=$album?>">
+          <? $result = verifyMyAlbums($id, $album);
+                  if ($result == 1) {
+                    ?><form action="../php_actions/action_removemyalbums.php?id_user=<?=$id ?>&id_album=<?=$album ?>" id="form2" method="post">
+                    <input type="submit" value="Remove from My Albums">
+>>>>>>> REFORMAT
                   </form>
                   <?php endif; ?>
             <div>
-              <?= $album ?>
+              <?= $name_album['nome_album']; ?>
             </div>
           </a>
         </li>
@@ -107,7 +134,3 @@
 
     </ul>
   </div>
-
-</body>
-
-</html>

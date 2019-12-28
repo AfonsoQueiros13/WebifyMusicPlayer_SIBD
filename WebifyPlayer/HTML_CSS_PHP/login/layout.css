@@ -30,7 +30,7 @@ body header div#signup{
   align-self: center;
 }
 
-body div#sidebar-clone{
+body div#iconmenu-clone{
   grid-area: sidebar;
   display: grid;
   grid-template-columns: [page-start] auto [page-end];
@@ -38,24 +38,24 @@ body div#sidebar-clone{
   grid-template-areas: "menu" "menu";
 }
 
-body div#sidebar-clone div#sidebar{
+body div#iconmenu-clone div#iconmenu{
   grid-area: menu;
 }
 
-body div#sidebar-clone div#sidebar ul{
+body div#iconmenu-clone div#iconmenu ul{
   display:flex;
   flex-direction: column;
   height: 100%;
 }
 
-body  div#sidebar-clone div#sidebar ul li{
+body  div#iconmenu-clone div#iconmenu ul li{
   flex-grow: .1;
 }
 
-body  div#sidebar-clone div#sidebar ul li:last-child{
+body  div#iconmenu-clone div#iconmenu ul li:last-child{
 flex-grow: .5;
 }
 
-body form{
+body div#login{
   grid-area:contentpage;
 }

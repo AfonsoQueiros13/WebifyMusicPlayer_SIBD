@@ -19,8 +19,8 @@ function insertMySong($id_user, $id_music, $id_album)
         $query = 'INSERT INTO liked_musics VALUES(?,?)';
         $stmt = $dbh->prepare($query);
         $stmt->execute(array($id_user, $id_music)); //NULL AUTOINCREMENTS ID
-        header('Location: ../artist-log/artist-log.php?id_album=' . $id_album . '&id_user=' . $id_user);
-    } 
+        header('Location: ../artist-guest/artist-guest.php?id=' . $id_album);
+    }
 }
 
 
@@ -34,7 +34,7 @@ function verifyMySongs($id_user, $id_music)
     $count = $stmt->fetchColumn();
 
     if ($count == 0)  //NO ENTRANCE FOR THIS MUSIC IN DATABASE LIKED_MUSICS
-        return 0; 
+        return 0;
     else
         return 1;
 }
@@ -61,7 +61,7 @@ function deleteMySongs($id_music, $id_user)
 
 function selectMusicIDbyName($nome_musica)
 {
-    
+
     global $dbh;
     $query = "SELECT id FROM  music WHERE name_music = ?";
     $stmt = $dbh->prepare($query);

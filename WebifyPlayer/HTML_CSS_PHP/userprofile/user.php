@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<?php
+session_start();
 
-<head>
-  <title> Webify </title>
-  <link rel="icon" type="image/gif, image/png" href="../../images/logo.png">
-  <meta charset="UTF-8">
-  <link href="style.css" rel=stylesheet>
-  <link href="layout.css" rel=stylesheet>
-  <link href="responsive.css" rel=stylesheet>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+include('../header.php');
+include('../iconmenu.php');
+include('../footer.php');
 
+<<<<<<< HEAD
 <body>
   <header>
     <img src="../../images/logo.png" alt="logo">
@@ -50,16 +45,28 @@
       </ul>
     </div>
   </div>
+=======
+$id=$_SESSION['id'];
 
+>>>>>>> REFORMAT
+
+ ?>
   <div id="rest">
+<<<<<<< HEAD
     <h1><?php echo($nickname[0]['nick_name'])?></h1>
     <form action="../php_actions/action_upload.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <input type="submit"  name="submit">
                 </form> 
+=======
+    <h1><?echo($_SESSION['username'])?></h1>
+
+    <h2> Change Profile Picture of User :  <?php echo($_SESSION['username'])?> </h2>
+      <form action="../php_actions/action_upload.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit"  name="submit">
+      </form>
+>>>>>>> REFORMAT
   </div>
-
-</body>
-
-</html>

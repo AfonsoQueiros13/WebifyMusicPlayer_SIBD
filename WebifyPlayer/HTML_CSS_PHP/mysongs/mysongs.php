@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   <!DOCTYPE html>
   <html lang="en-US">
 
@@ -56,17 +57,26 @@
         </ul>
       </div>
     </div>
+=======
+<?php
+session_start(); 
+include('../header.php');
+include('../iconmenu.php');
+include('../footer.php');
+>>>>>>> REFORMAT
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
+ ?>
 
     <div id="cont">
       <h2>My Songs</h2>
       <ul>
         <?php
         /*DISPLAY ERRORS*/
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
+
 
         /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
         require_once('../../config/init.php');
@@ -74,20 +84,38 @@
 
 
         #$searchmusic = $_POST['searchquery'];
-        $id = $_GET['id'];
+        $id = $_SESSION['id'];
         $allmusics = selectMySongs($id);
 
         $count = 0;
+<<<<<<< HEAD
         foreach ($allmusics as $music) :
+=======
+        foreach ($allmusics as $music) {
+          $yo=selectMusicIDbyName($music['name_music']);
+        //  echo $yo[0]['id'];
+>>>>>>> REFORMAT
           ?>
 
           <li>
             <div>
+<<<<<<< HEAD
               <?php $musicsids = selectMusicIDbyName($music['name_music']); ?>
               <a><?= $musicID = $musicsids[0]['id']; ?>
                 <?php $result = verifyMySongs($id, $musicID);
                   if ($result == 1) :
                     ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $musicID ?>" id="form2" method="post">
+=======
+              <?// $musicids = selectMusicIDbyName($music['name_music']); ?>
+
+              <a><?= $music['name_music'] ?>
+              <audio controls>
+                <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
+             </audio>
+                <? $result = verifyMySongs($id, $yo[0]['id']);
+                  if ($result == 1) {
+                    ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $yo[0]['id'] ?>" id="form2" method="post">
+>>>>>>> REFORMAT
                     <input type="submit" value="Remove from My Songs">
                     <?php echo $music['name_music']; ?>
                   </form>
@@ -101,7 +129,3 @@
           </li>
       </ul>
     </div>
-
-  </body>
-
-  </html>

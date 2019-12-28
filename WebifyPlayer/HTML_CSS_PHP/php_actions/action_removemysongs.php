@@ -12,9 +12,9 @@
   $id_music = $_GET['id_music'];
   try {
     deleteMySongs($id_music,$id_user); //RETURNS FOR $user_data db information for this user
-    header('Location: ../mysongs/mysongs.php?&id='.$id_user);
+    header('Location: ../mysongs/mysongs.php?&id_user='.$id_user . '&id_music='.$id_music);
 
-      } 
+      }
       catch(Exception $e) {
         echo 'Exception -> ';
         var_dump($e->getMessage());
