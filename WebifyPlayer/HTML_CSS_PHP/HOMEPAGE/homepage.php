@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  $_SESSION['log'];
+  $_SESSION['log'] = NULL;
 
   include('../header.php');
   include('../iconmenu.php');

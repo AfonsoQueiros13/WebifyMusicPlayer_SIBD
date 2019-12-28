@@ -1,4 +1,5 @@
 <?php
+  
   /*DISPLAY ERRORS*/
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -12,6 +13,9 @@
   $password = $_POST['password'];
   try {
     insertUser($email, $nick, $password);
+    $email = "";
+    $nick = "";
+    $password = "";
   } catch(Exception $e) {
     echo 'Exception -> ';
     var_dump($e->getMessage());
