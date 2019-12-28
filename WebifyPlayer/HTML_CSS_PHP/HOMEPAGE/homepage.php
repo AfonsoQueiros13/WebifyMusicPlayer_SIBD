@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  $_SESSION['log'] = NULL;
+  $_SESSION['log'];
   $_SESSION['value']=NULL;
   $_SESSION['nick']=NULL;
 

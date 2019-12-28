@@ -11,6 +11,7 @@
 
   $email = $_POST['email'];
   $password = $_POST['password'];
+  $_SESSION['value']=$email;
   try {
     $user_data = selectUser($email,$password); //RETURNS FOR $user_data db information for this user
     if(!$user_data)
@@ -24,6 +25,7 @@
       $_SESSION['email']=$email;
       $_SESSION['id']=$user_data[0]['id'];
       $_SESSION['log']=1;
+      unset($_SESSION['value']);
       header('Location: ../HOMEPAGE/homepage.php');
       exit;
     }
