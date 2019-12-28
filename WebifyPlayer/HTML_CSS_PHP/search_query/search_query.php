@@ -149,7 +149,7 @@ $allgenre = searchForGenre($search);
         ?>
 
         <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $genre['id'] ?>">
+          <a href="../artist-guest/artist-guest.php?id=<?= $genre ?>">
 
             <div>
               <?= $genre ?>

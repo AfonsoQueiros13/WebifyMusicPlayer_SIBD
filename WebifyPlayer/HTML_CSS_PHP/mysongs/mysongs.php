@@ -36,8 +36,10 @@ error_reporting(E_ALL);
             <div>
               <?// $musicids = selectMusicIDbyName($music['name_music']); ?>
 
-              <? // $musicids[0]['id']; ?>
               <a><?= $music['name_music'] ?>
+              <audio controls>
+                <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
+             </audio>
                 <? $result = verifyMySongs($id, $yo[0]['id']);
                   if ($result == 1) {
                     ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $yo[0]['id'] ?>" id="form2" method="post">

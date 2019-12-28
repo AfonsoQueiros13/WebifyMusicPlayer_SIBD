@@ -22,15 +22,24 @@ body header div#signup{
   align-self: center;
 }
 
+body header div#signup img{
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 75px;
+  
+}
+
 body header div#signup a{
   text-decoration: none;
   color:white;
+  padding:1em 1em 1em 1em;
 
 }
 
 body header div#signup a:nth-child(1){ /*  Register  */
-  margin-right: 1em;
-  padding:1em 1em 1em 1em;
+  position: relative;
+  top: -15px; /* This will move it 20px up */
+  right: 20px; /* This will move it 20px to the right */
   border-radius: 25px;
   border: 2px solid #b2b2b2;
 }
@@ -372,6 +381,16 @@ body div#cont ul li{
 
 
 /*     MY ALBUMS       */
+
+
+
+body div#cont div{
+  color:white;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/*    Profile     */
 
 
 

@@ -47,18 +47,14 @@
       <?php
 
       $id = $_SESSION['id'];
-      $pngphoto= "../../profile_pictures/profilephoto_user".$id.".png";
+    
       $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
-      if (file_exists($pngphoto)) {
       ?>
-      <img src=<?=$pngphoto?> alt="Profile Photo" height="42" width="42">
-    <?php } ?>
-
      <?php if (file_exists($jpgphoto)) { ?>
        <img src=<?=$jpgphoto?> alt="Profile Photo" height="42" width="42">
      <?php } ?>
 
-     <?php if (!file_exists($pngphoto) && !file_exists($jpgphoto)) { ?>
+     <?php if (!file_exists($jpgphoto)) { ?>
        <img src=<?="../../images/profile.png"?> alt="Profile Photo" height="42" width="42">
      <?php } ?>
 

@@ -12,7 +12,7 @@ $id=$_SESSION['id'];
   <div id="rest">
     <h1><?echo($_SESSION['username'])?></h1>
 
-    <h2> Change Profile Picture </h2>
+    <h2> Change Profile Picture of User :  <?php echo($_SESSION['username'])?> </h2>
       <form action="../php_actions/action_upload.php" method="post" enctype="multipart/form-data">
                     Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
