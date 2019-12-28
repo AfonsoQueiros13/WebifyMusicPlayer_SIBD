@@ -39,13 +39,27 @@ $allgenre = searchForGenre($search);
     <input type="text"  id = "search" name="searchquery" placeholder="Type anything . . ." >
     <input type="submit" value="Search">
   </form>
+<<<<<<< HEAD
   
   
+=======
+<<<<<<< HEAD
+  
+  
+=======
+</div>
+
+>>>>>>> REFORMAT
+>>>>>>> fc8524e0c0db17391b55f1ec6fcc49e92f7073f4
 
   <div id="initialtext">
 
     <h2>Artists</h2>
     <div id="artists">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fc8524e0c0db17391b55f1ec6fcc49e92f7073f4
       <?php
       /*DISPLAY ERRORS*/
       ini_set('display_errors', 1);
@@ -64,6 +78,32 @@ $allgenre = searchForGenre($search);
       foreach ($all_artists as $artist) :
         $artist = $all_artists[$count]['name'];
         $ID = get_id_by_name($artist);
+<<<<<<< HEAD
+=======
+=======
+      <ul>
+        <?php
+        $countertotal=0;
+        $count = 0;
+        foreach ($all_artists as $artist) {
+          $artist = $all_artists[$count]['name'];
+          $ID = get_id_by_name($artist);
+          ?>
+          <li>
+            <a href="../selected_artist-guestmode/selected_artist.php?id=<?= $ID['id'] ?>">
+              <div>
+                <?= $artist ?>
+              </div>
+            </a>
+          </li>
+
+
+        <?php
+          $count++;
+          $countertotal++;
+        }
+>>>>>>> REFORMAT
+>>>>>>> fc8524e0c0db17391b55f1ec6fcc49e92f7073f4
         ?>
       </ul>
 

@@ -6,6 +6,9 @@ include('../iconmenu.php');
 include('../footer.php');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fc8524e0c0db17391b55f1ec6fcc49e92f7073f4
 <body>
   <header>
     <img src="../../images/logo.png" alt="logo">
@@ -45,10 +48,13 @@ include('../footer.php');
       </ul>
     </div>
   </div>
+<<<<<<< HEAD
 =======
 $id=$_SESSION['id'];
 
 >>>>>>> REFORMAT
+=======
+>>>>>>> fc8524e0c0db17391b55f1ec6fcc49e92f7073f4
 
  ?>
   <div id="rest">
