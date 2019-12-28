@@ -45,7 +45,6 @@ $id = $_SESSION['id'];
                     ?><form action="../php_actions/action_removemyalbums.php?id_user=<?=$id ?>&id_album=<?=$album ?>" id="form2" method="post">
                     <input type="submit" value="Remove from My Albums">
                   </form>
-                    <?// echo //= $album ?>
                 <? } ?>
             <div>
               <?= $name_album['nome_album']; ?>

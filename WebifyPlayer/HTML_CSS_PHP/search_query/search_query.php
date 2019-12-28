@@ -34,10 +34,13 @@ $allgenre = searchForGenre($search);
   <!-- include textbox for searching songs, artists, playlists(?),.. -->
   <!-- should also include sidebar -->
 
+<div id="search">
   <form action="search_query.php" method="post">
     <input type="text" name="searchquery" placeholder="Type anything . . .">
     <input type="submit" value="Search">
   </form>
+</div>
+
 
   <div id="initialtext">
 
@@ -45,7 +48,7 @@ $allgenre = searchForGenre($search);
     <div id="artists">
       <ul>
         <?php
-
+        $countertotal=0;
         $count = 0;
         foreach ($all_artists as $artist) {
           $artist = $all_artists[$count]['name'];
@@ -62,6 +65,7 @@ $allgenre = searchForGenre($search);
 
         <?php
           $count++;
+          $countertotal++;
         }
         ?>
       </ul>
@@ -84,6 +88,7 @@ $allgenre = searchForGenre($search);
           //$album = get_album_by_id($all_albums[$count++]['nome_album']);
           $album = $all_albums[$count++]['nome_album'];
           $link= getalbumid_by_albumname($album);
+          $countertotal++;
           ?>
 
           <li>
@@ -127,6 +132,7 @@ $allgenre = searchForGenre($search);
 
       <?php
         $count++;
+        $countertotal++;
       }
       ?>
     </div>
@@ -154,6 +160,7 @@ $allgenre = searchForGenre($search);
 
       <?php
         $count++;
+        $countertotal++;
       }
       ?>
     </div>

@@ -18,9 +18,14 @@ body header img{
   max-width: 75px;
 }
 
+body header div#signup{
+  align-self: center;
+}
+
 body header div#signup a{
   text-decoration: none;
   color:white;
+
 }
 
 body header div#signup a:nth-child(1){ /*  Register  */
@@ -127,7 +132,7 @@ body  div#rest>article ul li a{
 /*       SEARCH-PAGE      */
 
 
-body form input[type=text]{
+body div#search form input[type=text]{
   margin-left: 1em;
   border-style: hidden;
   font-size: 2em;
@@ -138,7 +143,7 @@ body form input[type=text]{
   border-bottom-left-radius: 25px;
 }
 
-body form input[type=submit]{
+body div#search form input[type=submit]{
   margin-right: 1em;
   background-color: #262626;
   color: #adb3b3;
@@ -265,6 +270,8 @@ body div#content div#coverart img{
   border-radius: 25px;
 }
 
+
+
 body div#content div#coverart div{
   color:white;
   margin-bottom: 1em;
@@ -276,14 +283,42 @@ body div#content div#songs ul{
 
 body div#content div#songs ul li {
   color:white;
-  background-color: #121222;
+  background-color: #262626;
   border-radius: 75px;
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 body div#content div#coverart div a{
   text-decoration: none;
   color:white;
+}
+
+body div#content div#coverart form{
+  justify-self: center;
+}
+
+body div#content div#coverart input{
+  background-color: #262626;
+  border-style: hidden;
+  border-radius: 75px;
+  color: #adb3b3;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  margin-bottom: 2em;
+}
+
+body div#adds{
+  justify-content: center;
+}
+
+body div#adds input{
+  background-color: #262626;
+  border-style: hidden;
+  border-radius: 75px;
+  color: #adb3b3;
+  font-size: 1em;
+  padding: 1em 1em 1em 1em;
+  margin-bottom: 2em;
 }
 
 /*      SELECTED-ARTIST          */

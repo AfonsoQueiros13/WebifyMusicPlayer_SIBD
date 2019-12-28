@@ -12,10 +12,13 @@
   <!-- include textbox for searching songs, artists, playlists(?),.. -->
   <!-- should also include sidebar -->
 
+<div id="search">
   <form action="../search_query/search_query.php" method="POST">
     <input type="text" name="searchquery" placeholder="Type anything . . .">
     <input type="submit" value="Search">
   </form>
+</div>
+
 
   <div id="initialtext-search">
 

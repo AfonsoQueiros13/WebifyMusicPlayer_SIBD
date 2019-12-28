@@ -1,6 +1,5 @@
 <?php
   session_start();
-
   include('../header.php');
   include('../iconmenu.php');
   include('../footer.php');
@@ -91,6 +90,7 @@
 
     <ul>
       <?php foreach ($songs as $song_name): ?>
+
             <li> <?= $song_name['name_music'] ?> </li>
 
             <audio controls>
@@ -108,7 +108,9 @@
               $result = verifyMySongs($id_user, $id_music);
               if ($result == 0){
                 ?><form action="../php_actions/action_mysongs.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>&id_music=<?=$song_name['id']?>" id="form" method="post">
-                <input type="submit" value="Add to MySongs">
+                  <div id="adds">
+                    <input type="submit" value="Add to MySongs">
+                  </div>
                 </form>
             <?php } ?>
               <?php
