@@ -17,15 +17,28 @@ require_once('../../tools/db_queries_album.php');
 $search = $_POST['searchquery'];
 $all_artists = searchForArtist($search);
 
+$counter=0;
+foreach ($all_artists as $artist) {
+$counter++;
+}
+
 // $search = $_POST['searchquery'];
 $all_albums = searchForAlbum($search);
+foreach ($all_albums as $album) {
+  $counter++;
+}
 
 // $search = $_POST['searchquery'];
 $all_musics = searchForMusic($search);
-
+foreach ($all_musics as $music) {
+  $counter++;
+}
 
 // $search = $_POST['searchquery'];
 $allgenre = searchForGenre($search);
+foreach ($allgenre as $genre) {
+  $counter++;
+}
 
  ?>
 
@@ -45,6 +58,7 @@ $allgenre = searchForGenre($search);
   <div id="initialtext">
 
     <h2>Artists</h2>
+    <?php echo $counter ?>
     <div id="artists">
       <ul>
         <?php
