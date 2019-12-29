@@ -301,8 +301,6 @@ body div#content div#coverart img{
   border-radius: 25px;
 }
 
-
-
 body div#content div#coverart div{
   color:white;
   margin-bottom: 1em;
@@ -312,11 +310,32 @@ body div#content div#songs ul{
   list-style-type: none;
 }
 
+body div#content ul li{
+  color:white;
+  list-style-type: none;
+}
+
+body div#content ul > a{
+  color:white;
+  background-color: #263238;
+  border-radius: 75px;
+  margin-bottom: 2em;
+}
+
 body div#content div#songs ul li {
   color:white;
   background-color: #262626;
   border-radius: 75px;
   margin-top: 1em;
+}
+
+body div#content div#coverart div#added a{
+  text-decoration: none;
+  color:white;
+  background-color: #262626;
+  border-radius: 25px;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
 }
 
 body div#content div#coverart div a{
@@ -346,7 +365,7 @@ body div#adds{
 }
 
 body div#adds input{
-  background-color: #262626;
+  background-color: #263238;
   border-style: hidden;
   border-radius: 75px;
   color: #adb3b3;
