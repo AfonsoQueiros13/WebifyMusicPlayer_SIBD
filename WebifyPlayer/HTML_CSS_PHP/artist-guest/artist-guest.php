@@ -35,7 +35,7 @@
       <ul>
 
         <?php foreach ($songs as $song_name) { ?>
-          <li> <?= $song_name['name_music'] ?>
+          <li> <div><?= $song_name['name_music'] ?></div>
           <audio controls>
             <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
           </audio>
@@ -95,7 +95,7 @@
     <ul>
       <?php foreach ($songs as $song_name): ?>
 
-            <li> <?= $song_name['name_music'] ?>
+            <li> <div><?= $song_name['name_music'] ?></div>
 
             <audio controls>
               <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
@@ -120,7 +120,7 @@
               <?php
               $result = verifyMySongs($id_user, $id_music);
               if ($result == 1):
-              ?> <a> Music added in MySongs </a>
+              ?> <br> <a> Music added in MySongs </a>
               <?php endif; ?>
       <?php endforeach; ?>
             </li>

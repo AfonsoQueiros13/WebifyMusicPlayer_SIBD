@@ -69,3 +69,21 @@ body header div#signup a{
 body div#cont{
   grid-area:content;
 }
+
+body div#cont ul li {
+  display: flex;
+  flex-flow: column;
+}
+
+
+body div#cont ul li  a{
+  flex-grow: 1;
+}
+
+body div#cont ul li  audio{
+  flex-grow: 1;
+}
+
+body div#cont ul li  form{
+  flex-grow: 1;
+}

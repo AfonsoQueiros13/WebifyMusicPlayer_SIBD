@@ -87,11 +87,7 @@ body div#iconmenu ul li a{
 
 
 
-body div#iconmenu ul>li:nth-child(1)>a {
-  color:white;
-  border-style: hidden hidden hidden solid;
-  border-color: #034f84;
-}
+
 
 
 
@@ -315,18 +311,40 @@ body div#content ul li{
   list-style-type: none;
 }
 
-body div#content ul > a{
-  color:white;
-  background-color: #263238;
-  border-radius: 75px;
-  margin-bottom: 2em;
-}
-
-body div#content div#songs ul li {
+body div#content ul li > div{
   color:white;
   background-color: #262626;
   border-radius: 75px;
   margin-top: 1em;
+  justify-content: center;
+}
+
+body div#content ul li div{
+  justify-content: center;
+}
+
+body div#content ul li div input{
+  color:white;
+  background-color: #262626;
+  border-radius: 75px;
+  justify-content: center;
+}
+
+body div#content ul li > a{
+  color:white;
+  background-color: #263238;
+  border-radius: 75px;
+  margin-bottom: 2em;
+  justify-content:center;
+
+}
+
+body div#content div#songs ul li div{
+  color:white;
+  background-color: #262626;
+  border-radius: 75px;
+  margin-top: 1em;
+  justify-content: center;
 }
 
 body div#content div#coverart div#added a{
@@ -404,22 +422,60 @@ body div#cont ul li{
 
 
 
+body div#cont ul li input{
+  color:white;
+  background-color: #262626;
+  border-radius: 75px;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+
 /*     MY ALBUMS       */
 
+body div#continue h2{
+  color:white;
+}
 
+body div#continue ul li{
+  color:white;
+  list-style-type: none;
+}
 
-body div#cont div{
+body div#continue div{
   color:white;
   text-decoration: none;
   list-style-type: none;
+}
+
+body div#continue ul li input{
+  color:white;
+  background-color: #262626;
+  border-radius: 75px;
+  justify-content: center;
+  margin-bottom: 2em;
 }
 
 /*    Profile     */
 
+body div#rest h1{
+  color:white;
+  font-size: 3em;
+}
+
+body div#rest h2{
+  color:white;
+  font-size: 1em;
+}
 
 
-body div#cont div{
+body div#rest form{
+  color:white;
+}
+
+
+/* body div#cont div{     ??????
   color:white;
   text-decoration: none;
   list-style-type: none;
-}
+} */

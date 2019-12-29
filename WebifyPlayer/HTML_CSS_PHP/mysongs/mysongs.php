@@ -33,7 +33,7 @@ error_reporting(E_ALL);
           ?>
 
           <li>
-            <div>
+            <!-- <div> -->
 
               <a><?= $music['name_music'] ?></a>
               <audio controls>
@@ -43,10 +43,9 @@ error_reporting(E_ALL);
                   if ($result == 1) {
                     ?><form action="../php_actions/action_removemysongs.php?id_user=<?= $id ?>&id_music=<?= $yo[0]['id'] ?>" method="post">
                     <input type="submit" value="Remove from My Songs">
-
                   </form>
                 <?php } ?>
-              </div>
+              <!-- </div> -->
           </li>
         <?php
           }

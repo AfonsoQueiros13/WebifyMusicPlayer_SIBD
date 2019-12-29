@@ -66,6 +66,20 @@ body header div#signup a{
   flex-grow: 1;
 }
 
-body div#cont{
+body div#continue{
   grid-area:content;
+}
+
+body div#continue ul li{
+  display: flex;
+  flex-flow: row;
+}
+
+
+body div#continue ul li div{
+  flex-grow: .1;
+}
+
+body div#continue ul li a{
+  flex-grow: .001;
 }

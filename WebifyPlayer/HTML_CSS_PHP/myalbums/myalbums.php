@@ -19,7 +19,7 @@ $id = $_SESSION['id'];
 
 
 
-  <div id="cont">
+  <div id="continue">
     <h2>My Albums</h2>
     <ul>
       <?php
@@ -39,6 +39,9 @@ $id = $_SESSION['id'];
         ?>
 
         <li>
+          <div>
+            <?= $name_album['nome_album']; ?>
+          </div>
         <a href="../artist-guest/artist-guest.php?id=<?=$album?>"></a>
           <?php $result = verifyMyAlbums($id, $album); ?>
                 <?php  if ($result == 1) { ?>
@@ -46,9 +49,6 @@ $id = $_SESSION['id'];
                     <input type="submit" value="Remove from My Albums">
                   </form>
                 <?php } ?>
-            <div>
-              <?= $name_album['nome_album']; ?>
-            </div>
 
         </li>
 
