@@ -102,7 +102,7 @@ CREATE TABLE playlists_trends_by_genre (
   id_genre INTEGER references genre
 );
 
-insert into normal_user values (1, 'webify-admin@gmail.com','admin', 'admin');
+insert into normal_user values (1, 'admin','admin', 'admin');
 
 insert into profile values(1, 'admin', 'link', 1);
 
