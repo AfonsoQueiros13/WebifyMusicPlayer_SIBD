@@ -166,12 +166,12 @@ foreach ($allgenre as $genre) {
 
         <ul>
           <li>
-            <a href="../artist-guest/artist-guest.php?id=<?= $genre ?>">
+
 
               <div>
                 <?= $genre ?>
               </div>
-            </a>
+            
           </li>
         </ul>
 
