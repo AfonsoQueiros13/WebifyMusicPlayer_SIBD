@@ -205,7 +205,19 @@ body div#initialtext div ul li img{
   max-width: 200px;
 }
 
+body div#page{
+  color:white;
+  text-decoration: none;
+  text-align:center; 
 
+}
+
+body div#page a{
+  color:white;
+  text-decoration: none;
+  margin-right: 1em;
+  margin-left: 1em;
+}
 
 /*      LOGIN      */
 
@@ -468,14 +480,6 @@ body div#rest h2{
   font-size: 1em;
 }
 
-
 body div#rest form{
   color:white;
 }
-
-
-/* body div#cont div{     ??????
-  color:white;
-  text-decoration: none;
-  list-style-type: none;
-} */

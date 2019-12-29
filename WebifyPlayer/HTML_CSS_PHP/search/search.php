@@ -13,7 +13,7 @@
   <!-- should also include sidebar -->
 
 <div id="search">
-  <form action="../search_query/search_query.php" method="POST">
+  <form action="../search_query/search_query.php?page=1&value=0" method="POST">
     <input type="text" name="searchquery" placeholder="Type anything . . .">
     <input type="submit" value="Search">
   </form>
