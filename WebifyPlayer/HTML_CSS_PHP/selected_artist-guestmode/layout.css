@@ -28,49 +28,14 @@ body header div#signup{
   grid-area: signup;
   justify-self:end;
   align-self: center;
+  display: flex;
+  flex-flow: row;
 }
 
-body header div#signup a:nth-child(1){ /*  Register  */
-  margin-right: 1em;
-  padding:1em 1em 1em 1em;
-  border-radius: 25px;
-  border: 2px solid #b2b2b2;
-}
-
-body header div#signup a:nth-child(2){ /*  Login     */
-  padding: 1em 1.5em 1em 1.5em;
-  background-color: #034f84;
-  border-radius: 25px;
-}
-
-
-/*  CONTENT */
-/*
-body div#content{
-  grid-area: contentpage;
-  display:grid;
-  grid-template-columns: [artist_albm-start] auto [artist_albm-end-songs-start] auto [songs-end];
-  grid-template-rows: [page-start] auto [page-end];
-  grid-template-areas: "main songs";
-}
-
-body div#main{
-  grid-area: main;
-  display: grid;
-  grid-template-columns: [page-start] auto [page-end];
-  grid-template-rows: [artist-start] auto [artist-end-album-start] auto [album-end];
-  grid-template-areas: "artist" "album";
-}
-
-body div#songs{
-  grid-area:songs;
-}
-
-body div#songs ul{
-  display:flex;
-  flex-direction: column;
-}
-
-body div#songs ul li{
+body header div#signup img{
   flex-grow: 1;
-} */
+}
+
+body header div#signup a{
+  flex-grow: 1;
+}

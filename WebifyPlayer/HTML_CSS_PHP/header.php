@@ -42,12 +42,14 @@
 
     <div id="signup">
 
-      <a href="../userprofile/user.php"><?php echo $_SESSION['username']; ?></a>
+
+        <a href="../userprofile/user.php"> <?php echo $_SESSION['username']; ?>  </a>
+  
 
       <?php
 
       $id = $_SESSION['id'];
-    
+
       $jpgphoto= "../../profile_pictures/profilephoto_user".$id.".jpg";
       ?>
      <?php if (file_exists($jpgphoto)) { ?>

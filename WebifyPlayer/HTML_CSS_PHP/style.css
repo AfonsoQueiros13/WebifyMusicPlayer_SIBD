@@ -20,26 +20,28 @@ body header img{
 
 body header div#signup{
   align-self: center;
+  text-align: center;
 }
 
 body header div#signup img{
   margin-left: 1em;
   margin-right: 1em;
   max-width: 75px;
-  
+  align-self: center;
+
 }
+
+
 
 body header div#signup a{
   text-decoration: none;
   color:white;
   padding:1em 1em 1em 1em;
-
 }
 
 body header div#signup a:nth-child(1){ /*  Register  */
-  position: relative;
-  top: -15px; /* This will move it 20px up */
-  right: 20px; /* This will move it 20px to the right */
+  margin-right: 1em;
+  padding:1em 1em 1em 1em;
   border-radius: 25px;
   border: 2px solid #b2b2b2;
 }
@@ -320,6 +322,9 @@ body div#content div#songs ul li {
 body div#content div#coverart div a{
   text-decoration: none;
   color:white;
+  background-color: #262626;
+  border-radius: 25px;
+  padding: 1em 1em 1em 1em;
 }
 
 body div#content div#coverart form{

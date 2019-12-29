@@ -28,6 +28,16 @@ body header div#signup{
   grid-area: signup;
   justify-self:end;
   align-self: center;
+  display: flex;
+  flex-flow: row;
+}
+
+body header div#signup img{
+  flex-grow: 1;
+}
+
+body header div#signup a{
+  flex-grow: 1;
 }
 
 body header div#img{
