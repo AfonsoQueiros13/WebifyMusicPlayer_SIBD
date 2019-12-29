@@ -70,7 +70,7 @@ $counter = $counter_genre + $counter_musics + $counter_album + $counter_artist;
   <!-- should also include sidebar -->
 
 <div id="search">
-  <form action="search_query.php?page=1" method="get">
+  <form action="search_query.php?page=1" method="post">
     <input type="text" name="searchquery" placeholder="Type anything . . .">
     <input type="submit" value="Search">
   </form>
@@ -184,7 +184,7 @@ $counter = $counter_genre + $counter_musics + $counter_album + $counter_artist;
         <?php
         }
         else {
-        $count=0;
+          $count =0;
         break;
         }
             
