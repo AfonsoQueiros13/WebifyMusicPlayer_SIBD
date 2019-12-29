@@ -4,7 +4,7 @@ session_start();
 
 include('../header.php');
 include('../iconmenu.php');
-include('../footer.php');
+
 
 
 
@@ -33,7 +33,7 @@ include('../footer.php');
           <img src="<?= $artist['img_path_artist'] ?>" alt="artistcover">
         </div>
 
-          <ul>
+
             <?php
             $count=0;
             foreach ($albums as $album_single) {
@@ -42,8 +42,8 @@ include('../footer.php');
             ?>
             <h3>Album</h3>
                 <img src="<?=$img[$count]['img_path']?>" alt="cover photo">
-                <li> <?=$album_single['nome_album'] ?> </li>
-          </ul>
+              <ul>  <li> <?=$album_single['nome_album'] ?> </li>  </ul>
+
 
         <?php $songs=searchForMusic($album_single['nome_album']); ?>
 
@@ -60,3 +60,6 @@ include('../footer.php');
 
       </div>
     </div>
+
+
+<?php include('../footer.php'); ?>

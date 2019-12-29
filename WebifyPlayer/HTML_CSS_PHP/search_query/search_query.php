@@ -3,7 +3,7 @@ session_start();
 
 include('../header.php');
 include('../iconmenu.php');
-include('../footer.php');
+
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -121,13 +121,15 @@ $allgenre = searchForGenre($search);
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $music = $all_musics[$count]['name_music'];
         ?>
+        <ul>
+          <li>
+              <div>
+                <?= $music ?>
+              </div>
 
-        <li>
-            <div>
-              <?= $music ?>
-            </div>
-          </a>
-        </li>
+          </li>
+        </ul>
+
 
 
       <?php
@@ -148,14 +150,17 @@ $allgenre = searchForGenre($search);
         $genre = $allgenre[$count]['gen_name'];
         ?>
 
-        <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $genre ?>">
+        <ul>
+          <li>
+            <a href="../artist-guest/artist-guest.php?id=<?= $genre ?>">
 
-            <div>
-              <?= $genre ?>
-            </div>
-          </a>
-        </li>
+              <div>
+                <?= $genre ?>
+              </div>
+            </a>
+          </li>
+        </ul>
+
 
 
       <?php
@@ -166,3 +171,5 @@ $allgenre = searchForGenre($search);
     </div>
 
   </div>
+
+<?php include('../footer.php'); ?>

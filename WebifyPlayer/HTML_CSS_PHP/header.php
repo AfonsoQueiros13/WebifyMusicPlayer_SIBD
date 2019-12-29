@@ -5,7 +5,7 @@
 
 <head>
   <title> Webify </title>
-  <link rel="icon" type="image/gif/png" href="../../images/logo.png">
+  <link rel="icon" type="image/png" href="../../images/logo.png">
   <meta charset="UTF-8">
   <link href="../style.css" rel=stylesheet>
   <link href="layout.css" rel=stylesheet>
@@ -44,7 +44,7 @@
 
 
         <a href="../userprofile/user.php"> <?php echo $_SESSION['username']; ?>  </a>
-  
+
 
       <?php
 

@@ -3,7 +3,7 @@
 
   include('../header.php');
   include('../iconmenu.php');
-  include('../footer.php');
+
 
  ?>
 
@@ -25,3 +25,6 @@
     <h2>Search for anything</h2>
     <h3>artists, albums, songs, genres,...</h3>
   </div>
+
+
+  <?php   include('../footer.php'); ?>

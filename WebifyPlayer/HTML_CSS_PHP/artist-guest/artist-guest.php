@@ -2,7 +2,7 @@
   session_start();
   include('../header.php');
   include('../iconmenu.php');
-  include('../footer.php');
+
 
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -35,12 +35,12 @@
       <ul>
 
         <?php foreach ($songs as $song_name) { ?>
-          <li> <?= $song_name['name_music'] ?> </li>
+          <li> <?= $song_name['name_music'] ?>
           <audio controls>
             <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
           </audio>
         <?php } ?>
-
+          </li>
       </ul>
     </div>
 
@@ -95,7 +95,7 @@
     <ul>
       <?php foreach ($songs as $song_name): ?>
 
-            <li> <?= $song_name['name_music'] ?></li>
+            <li> <?= $song_name['name_music'] ?>
 
             <audio controls>
               <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
@@ -111,8 +111,8 @@
               $id_music = $song_name['id'];
               $result = verifyMySongs($id_user, $id_music);
               if ($result == 0){
-                ?><form action="../php_actions/action_mysongs.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>&id_music=<?=$song_name['id']?>" id="form" method="post">
-                  <div id="adds">
+                ?><form action="../php_actions/action_mysongs.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>&id_music=<?=$song_name['id']?>" method="post">
+                  <div>
                     <input type="submit" value="Add to MySongs">
                   </div>
                 </form>
@@ -123,9 +123,11 @@
               ?> <a> Music added in MySongs </a>
               <?php endif; ?>
       <?php endforeach; ?>
-
+            </li>
     </ul>
 
   </div>
 
 <?php } ?>
+
+<?php   include('../footer.php'); ?>

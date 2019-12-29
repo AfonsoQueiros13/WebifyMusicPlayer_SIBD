@@ -2,7 +2,7 @@
 session_start();
 include('../header.php');
 include('../iconmenu.php');
-include('../footer.php');
+
 
 
 ini_set('display_errors', 1);
@@ -39,17 +39,17 @@ $id = $_SESSION['id'];
         ?>
 
         <li>
-        <a href="../artist-guest/artist-guest.php?id=<?=$album?>">
-          <? $result = verifyMyAlbums($id, $album);
-                  if ($result == 1) {
-                    ?><form action="../php_actions/action_removemyalbums.php?id_user=<?=$id ?>&id_album=<?=$album ?>" id="form2" method="post">
+        <a href="../artist-guest/artist-guest.php?id=<?=$album?>"></a>
+          <?php $result = verifyMyAlbums($id, $album); ?>
+                <?php  if ($result == 1) { ?>
+                    <form action="../php_actions/action_removemyalbums.php?id_user=<?=$id ?>&id_album=<?=$album ?>" method="post">
                     <input type="submit" value="Remove from My Albums">
                   </form>
-                <? } ?>
+                <?php } ?>
             <div>
               <?= $name_album['nome_album']; ?>
             </div>
-          </a>
+
         </li>
 
 
@@ -60,3 +60,5 @@ $id = $_SESSION['id'];
 
     </ul>
   </div>
+
+  <?php include('../footer.php'); ?>
